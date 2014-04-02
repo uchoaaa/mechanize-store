@@ -1,0 +1,28 @@
+require 'spec_helper'
+
+module Store
+  describe Store::OrdersController do
+    routes { Store::Engine.routes }
+    
+    before do 
+        @order = FactoryGirl.create(:store_order)
+    end
+
+    let(:valid_session) { {} }
+
+    describe "GET index" do
+      it "assigns all order_statuses as @order_statuses" do
+        get :index, {}, valid_session
+        assigns(:orders).should eq([@order])
+      end
+    end
+
+    describe "GET show" do
+      it "assigns the requested order_status as @order_status" do
+        get :show, {:id => @order.to_param}, valid_session
+        assigns(:order).should eq(@order)
+      end
+    end
+
+  end
+end
