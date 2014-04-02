@@ -3,7 +3,7 @@ require File.expand_path('../boot', __FILE__)
 require 'rails/all'
 
 Bundler.require(*Rails.groups)
-require "store"
+require "mechanize_store"
 
 module Dummy
     class Application < Rails::Application
@@ -19,7 +19,7 @@ module Dummy
         # config.i18n.load_path += Dir[Rails.root.join('my', 'locales', '*.{rb,yml}').to_s]
         config.i18n.default_locale = "pt-BR"
 
-        # Store::Engine.config.i18n.default_locale = config.i18n.default_locale
+        # MechanizeStore::Engine.config.i18n.default_locale = config.i18n.default_locale
     end
 end
 

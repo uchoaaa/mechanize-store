@@ -1,0 +1,199 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the top of the
+ * compiled file, but it's generally better to create a new file per style scope.
+ *
+    *= require_self
+    *= require font-awesome
+    *= require mechanize_store/sb-admin/bootstrap
+    *= require mechanize_store/sb-admin/sb-admin
+    *= require mechanize_store/sb-admin/plugins/dataTables/dataTables.bootstrap
+    *= require mechanize_store/sb-admin/plugins/morris/morris-0.4.3.min
+    *= require mechanize_store/sb-admin/plugins/social-buttons/social-buttons
+    *= require mechanize_store/sb-admin/plugins/timeline/timeline
+ */
+
+@import "bootstrap";
+
+table {
+    a {
+        i {
+            font-size: 200%;
+        }
+    }    
+}
+
+.delete { 
+    color: red;
+}
+
+.danger-link {
+    a { 
+        background-color: #d2322d !important;
+        border-color: #ac2925 !important;
+    }
+}
+
+.success-link {
+    a {
+        color: #fff;
+        background-color: #5cb85c !important;
+        border-color: #4cae4c !important;
+    }
+}
+
+.green {
+    a {
+        background-color: #5cb85c !important;
+        border-color: #4cae4c !important;    
+    }
+}
+
+.active.warning a {
+    color: #fff !important;
+    background-color: #f0ad4e !important;
+    border-color: #eea236 !important;
+}
+
+.add-option {
+    a {
+        width: 100%;
+    }
+}
+
+.collapsable-link {
+    display: block;
+    padding: 20px
+}
+
+.panel-heading {
+    padding: 0px !important;
+
+    .collapsable-actions{ 
+        line-height: 60px;
+    }
+}
+
+.navbar-default {
+    background-color: #222222;
+    border-color: none;
+
+    .nav {
+        li {
+            a {
+                color: #f2f2f2;
+                &:hover {
+                    background-color: #565656 !important;
+                }
+            }        
+        }
+    }
+
+    .dropdown-menu {
+        li {
+            a {
+                color: #565656;
+
+                &:hover {
+                    background-color: #eee !important;
+                }
+            }
+        }
+    }
+    
+
+    .nav {
+        .open > a, .nav .open > a:hover, .nav .open > a:focus {
+            background-color: #565656 !important;
+        }
+    }
+
+}
+
+.navbar-default .navbar-brand {
+    color: #FFF;
+    padding: 10px 15px !important;
+
+    &:hover {
+        color: #eee;
+    }
+}
+
+.login .panel-title {
+    padding: 15px !important;
+}
+
+center.logo {
+    margin-top: 15%;
+}
+
+.login-panel {
+    margin-top: 10% !important;
+}
+
+.dashboard-item {
+    text-align: center;
+    i {
+        font-size: 400%;
+        display: block;
+    }
+}
+
+.question-actions {
+    padding: 12px;
+
+    .btn {
+        margin-left: 5px;
+    }
+}
+
+#donut-chart {
+    height: 300px;
+}
+
+.row.positions {
+    .in, .collapsing {
+        background: none repeat scroll 0 0 #FFFFFF;
+        height: auto;
+        position: absolute;
+        width: 99%;
+        z-index: 1000;
+        border: 1px solid #ddd;
+        opacity:0.9;
+        filter:alpha(opacity=90); /* For IE8 and earlier */
+    }
+
+    .col-lg-1 {
+        padding-right: 0px;
+
+        .well {
+            margin-bottom: 5px;
+            text-align: center;
+            font-weight: bold;
+            font-size: 200%;
+            padding: 9px;
+            color: #FFF;
+            background-color: #565656;
+            border-color: #565656;
+            border-top-right-radius: 0px;
+            border-bottom-right-radius: 0px;
+        }    
+    }
+
+    .col-lg-11 {
+        padding-left: 0px;
+
+        .panel-group {
+            .panel {
+                border-top-left-radius: 0px;
+                border-bottom-left-radius: 0px;
+            }
+        }
+    }
+}
+

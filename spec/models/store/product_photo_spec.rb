@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-module Store
+module MechanizeStore
   describe ProductPhoto do
 
   end

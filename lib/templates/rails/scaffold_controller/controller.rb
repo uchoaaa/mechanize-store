@@ -4,7 +4,7 @@ class <%= controller_class_name %>Controller < ApplicationController
   respond_to :html, :json, :xml
 
   def index
-    @search = <%= human_name %>.search(params[:q])
+    @search = <%= class_name %>.search(params[:q])
 
     @<%= plural_table_name %> = @search.result.paginate(page: params[:page])
 
@@ -27,23 +27,37 @@ class <%= controller_class_name %>Controller < ApplicationController
   def create
     @<%= singular_table_name %> = <%= orm_class.build(class_name, "#{singular_table_name}_params") %>
 
-    flash[:notice] = I18n.t(:created, model: I18n.t(:<%= singular_table_name %>, scope: "activerecord.models")) if @<%= orm_instance.save %>
-
-    respond_with @<%= singular_table_name %>
+    respond_with @<%= singular_table_name %> do |format|  
+      if @<%= orm_instance.save %>
+        format.html do 
+          flash[:notice] = I18n.t(:created, model: I18n.t(:<%= singular_table_name %>, scope: "activerecord.models")) 
+          redirect_to @<%= singular_table_name %>
+        end
+      else
+        format.html { render action: "new" }
+      end
+    end
   end
 
   def update
     @<%= singular_table_name %> = <%= orm_class.find(class_name, "params[:id]") %>
 
-    flash[:notice] = I18n.t(:updated, model: I18n.t(:<%= singular_table_name %>, scope: "activerecord.models")) if @<%= orm_instance.update("#{singular_table_name}_params") %>
-    
-    respond_with @<%= singular_table_name %>
+    respond_with @<%= singular_table_name %> do |format|
+      if @<%= orm_instance.update("#{singular_table_name}_params") %>
+        format.html do 
+          flash[:notice] = I18n.t(:updated, model: I18n.t(:<%= singular_table_name %>, scope: "activerecord.models")) 
+          redirect_to @<%= singular_table_name %>
+        end
+      else
+        format.html { render action: "edit" }
+      end
+    end
   end
 
   def destroy
     @<%= singular_table_name %> = <%= orm_class.find(class_name, "params[:id]") %>
     
-    flash[:alert] = I18n.t(:deleted, model: I18n.t(:<%= singular_table_name %>, scope: "activerecord.models")) if @<%= orm_instance.destroy %>
+    flash[:alert] = I18n.t(:removed, model: I18n.t(:<%= singular_table_name %>, scope: "activerecord.models")) if @<%= orm_instance.destroy %>
 
     respond_with @<%= singular_table_name %>, :location => <%= index_helper %>_url
   end

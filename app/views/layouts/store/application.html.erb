@@ -1,14 +1,93 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Store</title>
-  <%= stylesheet_link_tag    "store/application", media: "all" %>
-  <%= javascript_include_tag "store/application" %>
-  <%= csrf_meta_tags %>
+    <%= csrf_meta_tags %>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        Dummy
+    </title>
+    <%= stylesheet_link_tag "mechanize_store/application" %>
+
+    <%= javascript_include_tag "mechanize_store/application" %>
+
+    <%= yield :head %>
 </head>
+
 <body>
+    <div id="wrapper">
+        <nav class="navbar navbar-default navbar-static-top" role="navigation" style="margin-bottom: 0">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".sidebar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <%= link_to "Dummy App", orders_path, class: "navbar-brand" %>
+            </div>
+            
+            <!-- /.navbar-header -->
 
-<%= yield %>
+            <ul class="nav navbar-top-links navbar-right">
+                <!-- /.dropdown -->
+                <li class="dropdown">
+                    
+                    <!-- /.dropdown-user -->
+                </li>
+                <!-- /.dropdown -->
+            </ul>
+            <!-- /.navbar-top-links -->
 
+        </nav>
+        <!-- /.navbar-static-top -->
+
+        <nav class="navbar-static-side" role="navigation">
+            <div class="sidebar-collapse">
+                <ul class="nav" id="side-menu">
+                    <li>
+                        <%= link_to orders_path do %>
+                            <i class="fa fa-search"></i> <%= t(:order, scope: "activerecord.models.mechanize_store").pluralize %>
+                        <% end -%>
+                    </li>
+                    <li>
+                        <%= link_to products_path do %>
+                            <i class="fa fa-square"></i> <%= t(:product, scope: "activerecord.models.mechanize_store").pluralize %>
+                        <% end -%>
+                    </li>
+                </ul>
+                <!-- /#side-menu -->
+            </div>
+            <!-- /.sidebar-collapse -->
+        </nav>
+        <!-- /.navbar-static-side -->
+
+        <div id="page-wrapper">
+            <br/>
+            <div class="row">
+                <div class="col-lg-12">
+                    <%= render partial: "shared/flashes" %>
+
+                    <ul class="nav nav-pills pull-right">
+                      <%= yield :right %>
+                    </ul>
+
+                    <div class="page-header">
+                      <h1>
+                        <%= yield :title %> <% if content_for?(:subtitle) %> <small><%= yield :subtitle %></small> <% end %> 
+                      </h1>
+                    </div>
+
+                    <%= yield %>
+                </div>
+                <!-- /.col-lg-12 -->
+            </div>
+            <!-- /.row -->
+        </div>
+        <!-- /#page-wrapper -->
+
+    </div>
+    <!-- /#wrapper -->
 </body>
+
 </html>

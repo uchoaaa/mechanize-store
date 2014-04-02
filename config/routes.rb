@@ -1,4 +1,6 @@
-Store::Engine.routes.draw do
+MechanizeStore::Engine.routes.draw do
+    resources :product_categories
+
     resources :products
     resources :flags
     resources :payment_types

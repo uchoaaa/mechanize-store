@@ -11,15 +11,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140402153235) do
+ActiveRecord::Schema.define(version: 20140402203612) do
 
-  create_table "store_flags", force: true do |t|
+  create_table "mechanize_store_flags", force: true do |t|
     t.string   "name"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
-  create_table "store_freights", force: true do |t|
+  create_table "mechanize_store_freights", force: true do |t|
     t.float    "value"
     t.string   "service"
     t.integer  "order_id"
@@ -28,15 +28,24 @@ ActiveRecord::Schema.define(version: 20140402153235) do
     t.datetime "updated_at"
   end
 
-  add_index "store_freights", ["order_id"], name: "index_store_freights_on_order_id"
+  add_index "mechanize_store_freights", ["order_id"], name: "index_mechanize_store_freights_on_order_id"
 
-  create_table "store_order_statuses", force: true do |t|
+  create_table "mechanize_store_mechanize_stores", force: true do |t|
+    t.string   "name"
+    t.string   "key"
+    t.string   "url"
+    t.string   "zipcode"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "mechanize_store_order_statuses", force: true do |t|
     t.string   "name"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
-  create_table "store_orders", force: true do |t|
+  create_table "mechanize_store_orders", force: true do |t|
     t.integer  "order_status_id"
     t.integer  "store_id"
     t.datetime "delivery_date"
@@ -44,22 +53,22 @@ ActiveRecord::Schema.define(version: 20140402153235) do
     t.datetime "updated_at"
   end
 
-  add_index "store_orders", ["order_status_id"], name: "index_store_orders_on_order_status_id"
-  add_index "store_orders", ["store_id"], name: "index_store_orders_on_store_id"
+  add_index "mechanize_store_orders", ["order_status_id"], name: "index_mechanize_store_orders_on_order_status_id"
+  add_index "mechanize_store_orders", ["store_id"], name: "index_mechanize_store_orders_on_store_id"
 
-  create_table "store_payment_statuses", force: true do |t|
+  create_table "mechanize_store_payment_statuses", force: true do |t|
     t.string   "name"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
-  create_table "store_payment_types", force: true do |t|
+  create_table "mechanize_store_payment_types", force: true do |t|
     t.string   "name"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
-  create_table "store_payments", force: true do |t|
+  create_table "mechanize_store_payments", force: true do |t|
     t.integer  "payable_id"
     t.string   "payable_type"
     t.integer  "payment_status_id"
@@ -72,10 +81,17 @@ ActiveRecord::Schema.define(version: 20140402153235) do
     t.datetime "updated_at"
   end
 
-  add_index "store_payments", ["flag_id"], name: "index_store_payments_on_flag_id"
-  add_index "store_payments", ["payment_status_id"], name: "index_store_payments_on_payment_status_id"
+  add_index "mechanize_store_payments", ["flag_id"], name: "index_mechanize_store_payments_on_flag_id"
+  add_index "mechanize_store_payments", ["payment_status_id"], name: "index_mechanize_store_payments_on_payment_status_id"
 
-  create_table "store_product_photos", force: true do |t|
+  create_table "mechanize_store_product_categories", force: true do |t|
+    t.string   "name"
+    t.integer  "product_category_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "mechanize_store_product_photos", force: true do |t|
     t.string   "file_file_name"
     t.string   "file_content_type"
     t.integer  "file_file_size"
@@ -85,9 +101,9 @@ ActiveRecord::Schema.define(version: 20140402153235) do
     t.datetime "updated_at"
   end
 
-  add_index "store_product_photos", ["product_id"], name: "index_store_product_photos_on_product_id"
+  add_index "mechanize_store_product_photos", ["product_id"], name: "index_mechanize_store_product_photos_on_product_id"
 
-  create_table "store_products", force: true do |t|
+  create_table "mechanize_store_products", force: true do |t|
     t.string   "name"
     t.text     "description"
     t.string   "short_description"
@@ -100,15 +116,6 @@ ActiveRecord::Schema.define(version: 20140402153235) do
     t.datetime "updated_at"
   end
 
-  add_index "store_products", ["product_category_id"], name: "index_store_products_on_product_category_id"
-
-  create_table "store_stores", force: true do |t|
-    t.string   "name"
-    t.string   "key"
-    t.string   "url"
-    t.string   "zipcode"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
+  add_index "mechanize_store_products", ["product_category_id"], name: "index_mechanize_store_products_on_product_category_id"
 
 end

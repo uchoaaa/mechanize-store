@@ -1,7 +1,7 @@
 require 'spec_helper'
 
-module Store
+module MechanizeStore
     describe Order do
-        
+                
     end
 end

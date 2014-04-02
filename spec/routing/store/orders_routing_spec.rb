@@ -1,17 +1,17 @@
 require "spec_helper"
 
-module Store
+module MechanizeStore
   describe FlagsController do
-    routes { Store::Engine.routes }
+    routes { MechanizeStore::Engine.routes }
 
     describe "routing" do
 
       it "routes to #index" do
-        get("/orders").should route_to("store/orders#index")
+        get("/orders").should route_to("mechanize_store/orders#index")
       end
 
       it "routes to #show" do
-        get("/orders/1").should route_to("store/orders#show", :id => "1")
+        get("/orders/1").should route_to("mechanize_store/orders#show", :id => "1")
       end
     end
   end

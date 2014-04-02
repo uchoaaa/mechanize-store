@@ -1,6 +1,6 @@
 source "https://rubygems.org"
 
-# Declare your gem's dependencies in store.gemspec.
+# Declare your gem's dependencies in mechanize_store.gemspec.
 # Bundler will treat runtime dependencies like base dependencies, and
 # development dependencies will be added by default to the :development group.
 gemspec
@@ -20,3 +20,10 @@ gem 'will_paginate'
 gem 'bootstrap-will_paginate'
 gem 'font-awesome-rails'
 gem 'paperclip'
+
+gem 'coffee-rails'
+gem 'jquery-rails'
+gem 'jquery-turbolinks'
+gem 'turbolinks'
+gem 'sass-rails'
+gem 'bootstrap-sass', '~> 3.1.1'

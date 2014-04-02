@@ -1,0 +1,22 @@
+pt-BR:
+    date_begin: "Início"
+    date_end: "Fim"
+    new_product: "Novo produto"
+    search: "Buscar"
+
+    activerecord:
+        attributes:
+            mechanize_store:
+                order:
+                    created_at: "Criada em"
+                    delivery_date: "Data da entrega"
+                    generated_at: "Gerada em"
+                    order_status_id: "Status da compra"
+                payment:
+                    payment_status_id: "Status do pagamento"
+        models:
+            mechanize_store:
+                order: "Compra"
+                order_status: "Status da compra"
+                payment_status: "Status do pagamento"
+                product: "Produtos"

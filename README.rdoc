@@ -1,8 +1,8 @@
-= Store
+= MechanizeStore
 
 This project rocks and uses MIT-LICENSE.
 
-These project was created to encapsulate a commom models of an Store application, these model are:
+These project was created to encapsulate a commom models of an MechanizeStore application, these model are:
 
 * Flag (For credit cards flag)
     - name
@@ -42,9 +42,19 @@ These project was created to encapsulate a commom models of an Store application
     - payment_status_id
 
 * Order
-    - 
+    - order_status_id
+    - store
+    - delivery_date
 
 * Store
     - name
     - url 
     - key
+
+Add mechanize_store as a gem in your product:
+    
+    gem 'mechanize-store'
+
+Next execute this command in your terminal:
+
+    rake mechanize_mechanize_store:install:migrations

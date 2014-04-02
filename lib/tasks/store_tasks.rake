@@ -1,4 +1,4 @@
 # desc "Explaining what the task does"
-# task :store do
+# task :mechanize_store do
 #   # Task goes here
 # end

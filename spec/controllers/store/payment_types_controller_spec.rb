@@ -1,9 +1,9 @@
 require 'spec_helper'
 
-module Store
+module MechanizeStore
   describe PaymentTypesController do
 
-    routes { Store::Engine.routes }
+    routes { MechanizeStore::Engine.routes }
 
     let(:valid_attributes) { { "name" => "MyString" } }
     let(:valid_session) { {} }

@@ -1,3 +1,3 @@
 Rails.application.routes.draw do
-    mount Store::Engine => "/store"
+    mount MechanizeStore::Engine => "/mechanize_store"
 end

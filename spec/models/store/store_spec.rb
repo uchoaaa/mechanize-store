@@ -1,7 +1,7 @@
 require 'spec_helper'
 
-module Store
-  describe Store do
+module MechanizeStore
+  describe MechanizeStore do
 
   end
 end

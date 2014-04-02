@@ -1,11 +1,11 @@
 require 'spec_helper'
 
-module Store
-  describe Store::OrdersController do
-    routes { Store::Engine.routes }
+module MechanizeStore
+  describe MechanizeStore::OrdersController do
+    routes { MechanizeStore::Engine.routes }
     
     before do 
-        @order = FactoryGirl.create(:store_order)
+        @order = FactoryGirl.create(:mechanize_store_order)
     end
 
     let(:valid_session) { {} }

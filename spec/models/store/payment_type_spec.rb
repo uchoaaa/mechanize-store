@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-module Store
+module MechanizeStore
   describe PaymentType do
 
   end
