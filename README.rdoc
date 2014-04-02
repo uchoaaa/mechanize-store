@@ -1,3 +1,50 @@
 = Store
 
 This project rocks and uses MIT-LICENSE.
+
+These project was created to encapsulate a commom models of an Store application, these model are:
+
+* Flag (For credit cards flag)
+    - name
+
+* PaymentType (ex: :credit, :debit, :billet)
+    - name
+
+* PaymentStatus (ex: :paid, :awayting, :canceled)
+    - name
+
+* OrderStatus (ex: :accomplished, :delivered, :canceled)
+    - name 
+
+* ProductCategory
+    - name
+
+* Product
+    - name
+    - price
+    - description
+    - short_description
+    - weight
+    - height
+    - lenght
+    - product_category_id
+
+* ProductPhoto
+    - file (a paperclip attachment)
+    - product_id
+
+* Payment
+    - payable (a polymorphic association)
+    - value
+    - paid_value
+    - paid_in
+    - flag_id
+    - payment_status_id
+
+* Order
+    - 
+
+* Store
+    - name
+    - url 
+    - key

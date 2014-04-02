@@ -9,6 +9,7 @@ Gem::Specification.new do |s|
   s.version     = Store::VERSION
   s.authors     = ["Wilbert Ribeiro"]
   s.email       = ["wkelyson@gmail.com"]
+  s.licenses    = ["MIT"]
   s.homepage    = "http://www.github.com/wilbert/store"
   s.summary     = "Store is a couple of models that allows you create a simple products store with rails."
   s.description = "With store you already have implemented Product, Order, OrderStatus, Payment, PaymentStatus, OrderItem and ProductItem"
@@ -16,7 +17,7 @@ Gem::Specification.new do |s|
   s.files = Dir["{app,config,db,lib}/**/*", "MIT-LICENSE", "Rakefile", "README.rdoc"]
   s.test_files = Dir["test/**/*"]
 
-  s.add_dependency "rails", "~> 4.0.4"
+  s.add_dependency "rails", "~> 4.0"
   s.add_dependency "simple_form", '3.0.1'
   s.add_dependency "ransack", '1.1.0'
   s.add_dependency "will_paginate", '3.0.5'
@@ -24,5 +25,5 @@ Gem::Specification.new do |s|
   s.add_dependency "font-awesome-rails", "4.0.3.1"
   s.add_dependency "paperclip", "4.1.1"
   
-  s.add_development_dependency "sqlite3"
+  s.add_development_dependency "sqlite3", '1.3.9'
 end
