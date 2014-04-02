@@ -1,0 +1,43 @@
+<%= title t("product") %>
+
+<% content_for :right do -%>
+	<li class="active">
+		<%= link_to t(:edit), edit_product_path(@product) %>
+	</li>
+	<li class="active">
+		<%= link_to t(:back), products_path %>
+	</li>
+<% end -%>
+
+	<p>
+	  <small><%= t(:name, scope: "activerecord.attributes.product") %>:</small>
+	  <h3><%= @product.name %></h3>
+	</p>
+	<p>
+	  <small><%= t(:description, scope: "activerecord.attributes.product") %>:</small>
+	  <h3><%= @product.description %></h3>
+	</p>
+	<p>
+	  <small><%= t(:short_description, scope: "activerecord.attributes.product") %>:</small>
+	  <h3><%= @product.short_description %></h3>
+	</p>
+	<p>
+	  <small><%= t(:price, scope: "activerecord.attributes.product") %>:</small>
+	  <h3><%= @product.price %></h3>
+	</p>
+	<p>
+	  <small><%= t(:weight, scope: "activerecord.attributes.product") %>:</small>
+	  <h3><%= @product.weight %></h3>
+	</p>
+	<p>
+	  <small><%= t(:lenght, scope: "activerecord.attributes.product") %>:</small>
+	  <h3><%= @product.lenght %></h3>
+	</p>
+	<p>
+	  <small><%= t(:height, scope: "activerecord.attributes.product") %>:</small>
+	  <h3><%= @product.height %></h3>
+	</p>
+	<p>
+	  <small><%= t(:product_category, scope: "activerecord.attributes.product") %>:</small>
+	  <h3><%= @product.product_category %></h3>
+	</p>

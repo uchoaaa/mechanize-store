@@ -1,0 +1,9 @@
+<%= title t("new_flag") %>
+
+<% content_for :right do -%>
+	<li class="active">
+		<%= link_to t(:back), flags_path %>
+	</li>
+<% end -%>
+
+<%= render 'form' %>

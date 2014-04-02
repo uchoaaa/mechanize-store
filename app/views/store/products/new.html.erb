@@ -1,0 +1,9 @@
+<%= title t("new_product") %>
+
+<% content_for :right do -%>
+	<li class="active">
+		<%= link_to t(:back), products_path %>
+	</li>
+<% end -%>
+
+<%= render 'form' %>

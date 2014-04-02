@@ -1,0 +1,18 @@
+<%= simple_form_for(@product) do |f| %>
+  <%= f.error_notification %>
+
+  <div class="form-group">
+        <%= f.input :name %>
+        <%= f.input :description %>
+        <%= f.input :short_description %>
+        <%= f.input :price %>
+        <%= f.input :weight %>
+        <%= f.input :lenght %>
+        <%= f.input :height %>
+        <%= f.association :product_category %>
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit, class: "btn btn-primary" %>
+  </div>
+<% end %>

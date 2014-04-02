@@ -1,0 +1,15 @@
+<%= title t("payment_type") %>
+
+<% content_for :right do -%>
+	<li class="active">
+		<%= link_to t(:edit), edit_payment_type_path(@payment_type) %>
+	</li>
+	<li class="active">
+		<%= link_to t(:back), payment_types_path %>
+	</li>
+<% end -%>
+
+	<p>
+	  <small><%= t(:name, scope: "activerecord.attributes.payment_type") %>:</small>
+	  <h3><%= @payment_type.name %></h3>
+	</p>

@@ -1,0 +1,15 @@
+<%= title t("payment_status") %>
+
+<% content_for :right do -%>
+	<li class="active">
+		<%= link_to t(:edit), edit_payment_status_path(@payment_status) %>
+	</li>
+	<li class="active">
+		<%= link_to t(:back), payment_statuses_path %>
+	</li>
+<% end -%>
+
+	<p>
+	  <small><%= t(:name, scope: "activerecord.attributes.payment_status") %>:</small>
+	  <h3><%= @payment_status.name %></h3>
+	</p>
