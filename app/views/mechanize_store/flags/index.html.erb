@@ -1,4 +1,4 @@
-<%= title t("flag", scope: "activerecord.models").pluralize %>
+<%= title t("flag", scope: "activerecord.models.mechanize_store").pluralize %>
 
 <% content_for :right do -%>
   <li class="active">
@@ -10,7 +10,7 @@
   <thead>
     <tr>
       <th><%= sort_link @search, :id, t(:id, scope: "activerecord.attributes") %></th>
-      <th><%= sort_link @search, :name, t(:name, scope: "activerecord.attributes.flag") %></th>
+      <th><%= sort_link @search, :name, t(:name, scope: "activerecord.attributes.mechanize_store/flag") %></th>
       <th colspan="3"></th>
     </tr>
   </thead>

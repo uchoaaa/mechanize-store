@@ -3,34 +3,63 @@ pt-BR:
     edit: "Editar"
     date_begin: "Início"
     date_end: "Fim"
+    new_flag: "Nova bandeira"
+    new_order_status: "Novo status de compra"
+    new_payment_status: "Novo status do pagamento"
+    new_payment_type: "Novo tipo de pagamento"
     new_product: "Novo produto"
+    new_product_category: "Nova categoria de produto"
     products_list: "Lista de produtos"
     search: "Buscar"
 
+    helpers:
+        select:
+            prompt: Por favor selecione
+        submit:
+            create: Criar %{model}
+            submit: Salvar %{model}
+            update: Atualizar %{model}
+
     activerecord:
         attributes:
-            mechanize_store:
-                order:
-                    created_at: "Criada em"
-                    delivery_date: "Data da entrega"
-                    generated_at: "Gerada em"
-                    order_status_id: "Status da compra"
-                payment:
-                    payment_status_id: "Status do pagamento"
-                product:
-                    description: Descrição
-                    height: Altura
-                    lenght: Comprimento
-                    name: Nome
-                    price: Preço
-                    short_description: Resumo
-                    weight: Peso
-                    width: Largura
-                    product_category_id: "Categoria"
+            id: ID
+            mechanize_store/flag:
+                name: Nome
+            mechanize_store/order_status:
+                name: Nome
+            mechanize_store/order:
+                created_at: "Criada em"
+                delivery_date: "Data da entrega"
+                generated_at: "Gerada em"
+                order_status_id: "Status da compra"
+            mechanize_store/order_status:
+                name: Nome
+            mechanize_store/payment:
+                payment_status_id: "Status do pagamento"
+            mechanize_store/payment_status:
+                name: "Nome"
+            mechanize_store/payment_type:
+                name: "Nome"
+            mechanize_store/product:
+                description: Descrição
+                height: Altura
+                lenght: Comprimento
+                name: Nome
+                price: Preço
+                short_description: Resumo
+                weight: Peso
+                width: Largura
+                product_category_id: "Categoria"
+            mechanize_store/product_category:
+                name: "Nome"
+                product_category_id: "Categoria de produto"
+
         models:
             mechanize_store:
+                flag: "Bandeira"
                 order: "Compra"
-                order_status: "Status da compra"
-                payment_status: "Status do pagamento"
+                order_status: "Status de compra"
+                payment_status: "Status de pagamento"
+                payment_type: "Tipo de pagamento"
                 product: "Produtos"
                 product_category: "Categoria de produto"

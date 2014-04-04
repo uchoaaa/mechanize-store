@@ -1,11 +1,11 @@
 <%= simple_form_for(@order_status) do |f| %>
-  <%= f.error_notification %>
+    <%= f.error_notification %>
 
-  <div class="form-group">
+    <div class="form-group">
         <%= f.input :name %>
-  </div>
+    </div>
 
-  <div class="form-actions">
-    <%= f.button :submit, class: "btn btn-primary" %>
-  </div>
+    <div class="form-actions">
+        <%= f.button :submit, t(:create, model: t(:order_status, scope: "activerecord.models.mechanize_store"), scope: "helpers.submit"), class: "btn btn-primary" %>
+    </div>
 <% end %>

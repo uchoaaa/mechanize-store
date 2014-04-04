@@ -45,13 +45,13 @@
   <thead>
     <tr>
       <th><%= sort_link(@search, :id, t(:id, scope: "activerecord.attributes") ) %></th>
-      <th><%= sort_link(@search, :order_status_id, t(:order_status_id, scope: "activerecord.attributes.mechanize_store.order") ) %></th>
+      <th><%= sort_link(@search, :order_status_id, t(:order_status_id, scope: "activerecord.attributes.mechanize_store/order") ) %></th>
       <th>
-        <%= sort_link(@search, :order_payment_payment_status_name, t(:payment_status_id, scope: "activerecord.attributes.mechanize_store.payment") ) %>
+        <%= sort_link(@search, :order_payment_payment_status_name, t(:payment_status_id, scope: "activerecord.attributes.mechanize_store/payment") ) %>
       </th>
-      <th><%= sort_link(@search, :generated_at, t(:generated_at, scope: "activerecord.attributes.mechanize_store.order") ) %></th>
-      <th><%= sort_link(@search, :delivery_date, t(:delivery_date, scope: "activerecord.attributes.mechanize_store.order") ) %></th>
-      <th><%= sort_link(@search, :created_at, t(:created_at, scope: "activerecord.attributes.mechanize_store.order") ) %></th>
+      <th><%= sort_link(@search, :generated_at, t(:generated_at, scope: "activerecord.attributes.mechanize_store/order") ) %></th>
+      <th><%= sort_link(@search, :delivery_date, t(:delivery_date, scope: "activerecord.attributes.mechanize_store/order") ) %></th>
+      <th><%= sort_link(@search, :created_at, t(:created_at, scope: "activerecord.attributes.mechanize_store/order") ) %></th>
       <th><%= t(:options, scope: "activerecord.attributes.order") %></th>
     </tr>
   </thead>

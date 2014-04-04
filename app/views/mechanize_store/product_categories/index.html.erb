@@ -10,8 +10,8 @@
   <thead>
     <tr>
       <th><%= sort_link @search, :id, t(:id, scope: "activerecord.attributes") %></th>
-      <th><%= sort_link @search, :name, t(:name, scope: "activerecord.attributes.product_category") %></th>
-      <th><%= sort_link @search, :product_category, t(:product_category, scope: "activerecord.attributes.product_category") %></th>
+      <th><%= sort_link @search, :name, t(:name, scope: "activerecord.attributes.mechanize_store/product_category") %></th>
+      <th><%= sort_link @search, :product_category, t(:product_category, scope: "activerecord.attributes.mechanize_store/product_category") %></th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -20,7 +20,7 @@
       <tr>
         <td><%= product_category.id %></td>
         <td><%= product_category.name %></td>
-        <td><%= product_category.product_category %></td>
+        <td><%= product_category.product_category.name unless product_category.product_category.nil? %></td>
         <td>
           <%= link_to product_category do %>
             <i class="fa fa-file"></i>

@@ -46,13 +46,35 @@
             <div class="sidebar-collapse">
                 <ul class="nav" id="side-menu">
                     <li>
+                        <%= link_to flags_path do %>
+                            <%= t(:flag, scope: "activerecord.models.mechanize_store").pluralize %>
+                        <% end -%>
+                    </li>
+
+                    <li>
                         <%= link_to orders_path do %>
-                            <i class="fa fa-search"></i> <%= t(:order, scope: "activerecord.models.mechanize_store").pluralize %>
+                            <%= t(:order, scope: "activerecord.models.mechanize_store").pluralize %>
+                        <% end -%>
+                    </li>
+
+                    <li>
+                        <%= link_to payment_types_path do %>
+                            <%= t(:payment_type, scope: "activerecord.models.mechanize_store").pluralize %>
+                        <% end -%>
+                    </li>
+
+                    <li>
+                        <%= link_to payment_statuses_path do %>
+                            <%= t(:payment_status, scope: "activerecord.models.mechanize_store").pluralize %>
+                        <% end -%>
+                    </li>
+                    <li>
+                        <%= link_to order_statuses_path do %>
+                            <%= t(:order_status, scope: "activerecord.models.mechanize_store").pluralize %>
                         <% end -%>
                     </li>
                     <li>
                         <%= link_to products_path do %>
-                            <i class="fa fa-square"></i> 
                             <%= t(:product, scope: "activerecord.models.mechanize_store").pluralize %>
                             <span class="fa arrow"></span>
                         <% end -%>
