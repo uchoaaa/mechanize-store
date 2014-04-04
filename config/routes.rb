@@ -1,7 +1,8 @@
 MechanizeStore::Engine.routes.draw do
     resources :product_categories
-
-    resources :products
+    resources :products do 
+        resources :product_photos, shallow: true
+    end
     resources :flags
     resources :payment_types
     resources :payment_statuses

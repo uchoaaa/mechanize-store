@@ -52,8 +52,22 @@
                     </li>
                     <li>
                         <%= link_to products_path do %>
-                            <i class="fa fa-square"></i> <%= t(:product, scope: "activerecord.models.mechanize_store").pluralize %>
+                            <i class="fa fa-square"></i> 
+                            <%= t(:product, scope: "activerecord.models.mechanize_store").pluralize %>
+                            <span class="fa arrow"></span>
                         <% end -%>
+                        <ul class="nav nav-second-level collapse" style="height: auto;">
+                            <li>
+                                <%= link_to products_path do %>
+                                    <%= t(:products_list).pluralize %>
+                                <% end -%>
+                            </li>
+                            <li>
+                                <%= link_to product_categories_path do %>
+                                    <%= t(:product_category, scope: "activerecord.models.mechanize_store").pluralize %>
+                                <% end -%>
+                            </li>
+                        </ul>
                     </li>
                 </ul>
                 <!-- /#side-menu -->

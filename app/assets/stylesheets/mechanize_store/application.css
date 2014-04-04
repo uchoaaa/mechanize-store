@@ -18,8 +18,6 @@
     *= require mechanize_store/sb-admin/plugins/timeline/timeline
  */
 
-@import "bootstrap";
-
 table {
     a {
         i {

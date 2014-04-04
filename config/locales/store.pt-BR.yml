@@ -1,7 +1,10 @@
 pt-BR:
+    back: "Voltar"
+    edit: "Editar"
     date_begin: "Início"
     date_end: "Fim"
     new_product: "Novo produto"
+    products_list: "Lista de produtos"
     search: "Buscar"
 
     activerecord:
@@ -14,9 +17,20 @@ pt-BR:
                     order_status_id: "Status da compra"
                 payment:
                     payment_status_id: "Status do pagamento"
+                product:
+                    description: Descrição
+                    height: Altura
+                    lenght: Comprimento
+                    name: Nome
+                    price: Preço
+                    short_description: Resumo
+                    weight: Peso
+                    width: Largura
+                    product_category_id: "Categoria"
         models:
             mechanize_store:
                 order: "Compra"
                 order_status: "Status da compra"
                 payment_status: "Status do pagamento"
                 product: "Produtos"
+                product_category: "Categoria de produto"

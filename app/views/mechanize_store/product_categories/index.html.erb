@@ -1,4 +1,4 @@
-<%= title t("product_category", scope: "activerecord.models").pluralize %>
+<%= title t("product_category", scope: "activerecord.models.mechanize_store").pluralize %>
 
 <% content_for :right do -%>
   <li class="active">
@@ -15,9 +15,7 @@
       <th colspan="3"></th>
     </tr>
   </thead>
-
   <tbody>
-
     <% @product_categories.each do |product_category| %>
       <tr>
         <td><%= product_category.id %></td>
