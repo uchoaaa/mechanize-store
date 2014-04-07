@@ -52,7 +52,7 @@ pt-BR:
                 product_category_id: "Categoria"
             mechanize_store/product_category:
                 name: "Nome"
-                product_category_id: "Categoria de produto"
+                product_category: "Categoria de produto"
 
         models:
             mechanize_store:
