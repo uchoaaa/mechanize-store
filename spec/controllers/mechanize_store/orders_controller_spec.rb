@@ -3,9 +3,10 @@ require 'spec_helper'
 module MechanizeStore
   describe MechanizeStore::OrdersController do
     routes { MechanizeStore::Engine.routes }
-    
-    before do 
-        @order = FactoryGirl.create(:mechanize_store_order)
+
+    before do
+        @payment = FactoryGirl.create(:mechanize_store_payment)
+        @order = FactoryGirl.create(:mechanize_store_order, payment: @payment)
     end
 
     let(:valid_session) { {} }
