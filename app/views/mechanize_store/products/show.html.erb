@@ -15,11 +15,11 @@
 </p>
 <p>
 	<small><%= t(:description, scope: "activerecord.attributes.mechanize_store.product") %>:</small>
-	<h3><%= @product.description %></h3>
+	<h3><%= raw @product.description %></h3>
 </p>
 <p>
 	<small><%= t(:short_description, scope: "activerecord.attributes.mechanize_store.product") %>:</small>
-	<h3><%= @product.short_description %></h3>
+	<h3><%= raw @product.short_description %></h3>
 </p>
 <p>
 	<small><%= t(:price, scope: "activerecord.attributes.mechanize_store.product") %>:</small>
@@ -39,7 +39,7 @@
 </p>
 <p>
 	<small><%= t(:product_category_id, scope: "activerecord.attributes.mechanize_store.product") %>:</small>
-	<h3><%= @product.product_category.name %></h3>
+	<h3><%= @product.product_category.name unless @product.product_category.nil? %></h3>
 </p>
 
 <form id="fileupload" action="/photos" method="POST" enctype="multipart/form-data">
@@ -54,17 +54,17 @@
                 <span>Adicionar...</span>
                 <input type="file" name="product_photo[file][]" multiple>
             </span>
-            
+
             <button type="submit" class="btn btn-primary start">
                 <i class="fa fa-upload"></i>
                 <span>Iniciar Upload</span>
             </button>
-            
+
             <button type="reset" class="btn btn-warning cancel">
                 <i class="fa fa-ban-circle"></i>
                 <span>Cancelar upload</span>
             </button>
-            
+
             <button type="button" class="btn btn-danger delete">
                 <i class="fa fa-trash-o"></i>
                 <span>Remover</span>

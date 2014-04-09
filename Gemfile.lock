@@ -1,19 +1,19 @@
 PATH
   remote: .
   specs:
-    mechanize-store (0.0.1)
-      bootstrap-sass (~> 3.1.1)
+    mechanize_store (0.0.2)
+      bootstrap-sass (~> 3.1)
       bootstrap-will_paginate (= 0.0.10)
       font-awesome-rails (= 4.0.3.1)
       jbuilder (~> 1.2)
       jquery-rails (~> 3.1)
-      jquery-turbolinks (~> 2.0.2)
+      jquery-turbolinks (~> 2.0)
       paperclip (= 3.5.3)
       rails (~> 4.0)
       ransack (= 1.1.0)
       sass-rails (~> 4.0)
       simple_form (= 3.0.1)
-      turbolinks (~> 2.2.1)
+      turbolinks (~> 2.2)
       will_paginate (= 3.0.5)
 
 GEM
@@ -178,7 +178,7 @@ DEPENDENCIES
   jbuilder (~> 1.2)
   jquery-rails
   jquery-turbolinks
-  mechanize-store!
+  mechanize_store!
   paperclip (= 3.5.3)
   ransack
   rspec-rails

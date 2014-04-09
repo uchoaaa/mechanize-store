@@ -5,17 +5,17 @@ require "mechanize_store/version"
 
 # Describe your gem and declare its dependencies:
 Gem::Specification.new do |s|
-  s.name        = "mechanize-store"
+  s.name        = "mechanize_store"
   s.version     = MechanizeStore::VERSION
   s.authors     = ["Wilbert Ribeiro"]
   s.email       = ["wkelyson@gmail.com"]
   s.licenses    = ["MIT"]
   s.homepage    = "http://www.github.com/wilbert/mechanize-store"
   s.summary     = "Mechanize store is a couple of models that allows you create a simple products store with rails."
-  s.description = "With mechanize store you already have implemented Product, ProductPhoto, ProductCategory, Order, OrderStatus, Payment, PaymentStatus, OrderItem and ProductItem"
+  s.description = "With mechanize store you will have Product, ProductPhoto, ProductCategory, Order, OrderStatus, Payment, PaymentStatus, OrderItem and ProductItem"
 
   s.files = Dir["{app,config,db,lib}/**/*", "MIT-LICENSE", "Rakefile", "README.rdoc"]
-  s.test_files = Dir["test/**/*"]
+  s.test_files = Dir["spec/**/*"]
 
   s.add_dependency "rails", "~> 4.0"
   s.add_dependency "simple_form", '3.0.1'

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140402203612) do
+ActiveRecord::Schema.define(version: 20140409191457) do
 
   create_table "mechanize_store_flags", force: true do |t|
     t.string   "name"
@@ -30,14 +30,17 @@ ActiveRecord::Schema.define(version: 20140402203612) do
 
   add_index "mechanize_store_freights", ["order_id"], name: "index_mechanize_store_freights_on_order_id"
 
-  create_table "mechanize_store_mechanize_stores", force: true do |t|
-    t.string   "name"
-    t.string   "key"
-    t.string   "url"
-    t.string   "zipcode"
+  create_table "mechanize_store_order_items", force: true do |t|
+    t.integer  "quantity"
+    t.float    "price"
+    t.integer  "order_id"
+    t.integer  "product_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
+
+  add_index "mechanize_store_order_items", ["order_id"], name: "index_mechanize_store_order_items_on_order_id"
+  add_index "mechanize_store_order_items", ["product_id"], name: "index_mechanize_store_order_items_on_product_id"
 
   create_table "mechanize_store_order_statuses", force: true do |t|
     t.string   "name"
@@ -114,6 +117,7 @@ ActiveRecord::Schema.define(version: 20140402203612) do
     t.integer  "product_category_id"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.float    "width"
   end
 
   add_index "mechanize_store_products", ["product_category_id"], name: "index_mechanize_store_products_on_product_category_id"

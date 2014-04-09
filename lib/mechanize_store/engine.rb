@@ -12,5 +12,6 @@ module MechanizeStore
         end
 
         MechanizeStore::Engine.config.i18n.default_locale = I18n.default_locale
+
     end
 end

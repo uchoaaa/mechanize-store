@@ -13,9 +13,9 @@ module MechanizeStore
         @product = FactoryGirl.create(:mechanize_store_product)
     end
 
-    describe "GET index" do 
+    describe "GET index" do
       it "assigns all product_photos as @product_photos" do
-        payment_type = ProductPhoto.create! valid_attributes 
+        payment_type = ProductPhoto.create! valid_attributes
         get :index, { product_id: @product.id, format: "json" }, valid_session
         assigns(:product_photos).should eq(@product.product_photos)
       end
@@ -25,19 +25,19 @@ module MechanizeStore
       describe "with valid params" do
         it "creates a new ProductCategory" do
           expect {
-            post :create, { product_id: @product.id, :product_photo => valid_attributes }, valid_session
+            post :create, { product_id: @product.id, :product_photo => { "file" => [fixture_file_upload('rails.png')] } }, valid_session
           }.to change(ProductPhoto, :count).by(1)
         end
 
         it "assigns a newly created product_photo as @product_photo" do
-          post :create, { product_id: @product.id, :product_photo => valid_attributes }, valid_session
-          
+          post :create, { product_id: @product.id, :product_photo => { "file" => [fixture_file_upload('rails.png')] } }, valid_session
+
           assigns(:product_photo).should be_a(ProductPhoto)
           assigns(:product_photo).should be_persisted
         end
 
         it "redirects to the created product_photo" do
-          post :create, { :product_photo => valid_attributes, product_id: @product.id }, valid_session
+          post :create, { :product_photo => { "file" => [fixture_file_upload('rails.png')] }, product_id: @product.id }, valid_session
 
           response.should redirect_to(@product)
         end
@@ -48,7 +48,7 @@ module MechanizeStore
           # Trigger the behavior that occurs when invalid params are submitted
           ProductCategory.any_instance.stub(:save).and_return(false)
 
-          post :create, { product_id: @product.id, format: "json", :product_photo => { "name" => "invalid value" }}, valid_session
+          post :create, { product_id: @product.id, format: "json", :product_photo => { "file" => [nil] } }, valid_session
 
           assigns(:product_photo).should be_a_new(ProductPhoto)
         end

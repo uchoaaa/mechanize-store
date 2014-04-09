@@ -30,8 +30,8 @@ module MechanizeStore
 
       respond_with @product do |format|
         if @product.save
-          format.html do 
-            flash[:notice] = I18n.t(:created, model: I18n.t(:product, scope: "activerecord.models")) 
+          format.html do
+            flash[:notice] = I18n.t(:created, model: I18n.t(:product, scope: "activerecord.models"))
             redirect_to @product
           end
         else
@@ -45,8 +45,8 @@ module MechanizeStore
 
       respond_with @product do |format|
         if @product.update(product_params)
-          format.html do 
-            flash[:notice] = I18n.t(:updated, model: I18n.t(:product, scope: "activerecord.models")) 
+          format.html do
+            flash[:notice] = I18n.t(:updated, model: I18n.t(:product, scope: "activerecord.models"))
             redirect_to @product
           end
         else
@@ -57,7 +57,7 @@ module MechanizeStore
 
     def destroy
       @product = Product.find(params[:id])
-      
+
       flash[:alert] = I18n.t(:deleted, model: I18n.t(:product, scope: "activerecord.models")) if @product.destroy
 
       respond_with @product, :location => products_url
