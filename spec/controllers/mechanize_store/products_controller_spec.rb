@@ -80,10 +80,6 @@ module MechanizeStore
       describe "with valid params" do
         it "updates the requested product" do
           product = Product.create! valid_attributes
-          # Assuming there are no other products in the database, this
-          # specifies that the Product created on the previous line
-          # receives the :update_attributes message with whatever params are
-          # submitted in the request.
           Product.any_instance.should_receive(:update).with({ "name" => "MyString" })
           put :update, {:id => product.to_param, :product => { "name" => "MyString" }}, valid_session
         end

@@ -1,8 +1,7 @@
 class CreateMechanizeStorePayments < ActiveRecord::Migration
   def change
     create_table :mechanize_store_payments do |t|
-      t.integer :payable_id
-      t.string :payable_type
+      t.integer :order_id, index: true
       t.references :payment_status, index: true
       t.float :value
       t.float :paid_value

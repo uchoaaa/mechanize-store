@@ -1,6 +1,6 @@
 module MechanizeStore
   class ProductPhoto < ActiveRecord::Base
-    belongs_to :product
+    belongs_to :product, class_name: MechanizeStore::Product
 
     has_attached_file :file,
         :styles => { :medium => "300x300>", :thumb => "100x100>" },

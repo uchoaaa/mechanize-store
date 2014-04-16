@@ -1,9 +1,9 @@
 module MechanizeStore
   class Order < ActiveRecord::Base
     belongs_to :order_status
-    belongs_to :mechanize_store
+    belongs_to :store
 
-    has_one :payment, as: :payable
+    has_one :payment
     accepts_nested_attributes_for :payment, :allow_destroy => false
 
     has_one :freight, dependent: :destroy
