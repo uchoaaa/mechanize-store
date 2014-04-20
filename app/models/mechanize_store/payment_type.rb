@@ -1,4 +1,5 @@
 module MechanizeStore
-  class PaymentType < ActiveRecord::Base
-  end
+    class PaymentType < ActiveRecord::Base
+        
+    end
 end
