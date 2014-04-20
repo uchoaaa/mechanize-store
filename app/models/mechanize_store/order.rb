@@ -10,6 +10,7 @@ module MechanizeStore
     accepts_nested_attributes_for :freight, :allow_destroy => true
 
     has_many :order_items
+    accepts_nested_attributes_for :order_items, :allow_destroy => false
 
     before_create :set_defaults
     after_create :after_create
