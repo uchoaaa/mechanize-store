@@ -2,8 +2,6 @@
 
 FactoryGirl.define do
   factory :mechanize_store_payment, :class => MechanizeStore::Payment do
-    payable_id 1
-    payable_type "MyString"
     payment_status nil
     value 1.5
     paid_value 1.5

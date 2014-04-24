@@ -15,6 +15,7 @@ module MechanizeStore
             params[:q] ||= {}
 
             @search = Order.search(params[:q])
+            
             @orders = @search.result.paginate(page: params[:page])
 
             respond_with @orders

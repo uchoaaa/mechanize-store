@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140409191457) do
+ActiveRecord::Schema.define(version: 20140424193648) do
 
   create_table "mechanize_store_flags", force: true do |t|
     t.string   "name"
@@ -26,6 +26,7 @@ ActiveRecord::Schema.define(version: 20140409191457) do
     t.string   "zipcode"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "delivery_time"
   end
 
   add_index "mechanize_store_freights", ["order_id"], name: "index_mechanize_store_freights_on_order_id"
@@ -72,8 +73,7 @@ ActiveRecord::Schema.define(version: 20140409191457) do
   end
 
   create_table "mechanize_store_payments", force: true do |t|
-    t.integer  "payable_id"
-    t.string   "payable_type"
+    t.integer  "order_id"
     t.integer  "payment_status_id"
     t.float    "value"
     t.float    "paid_value"
@@ -82,10 +82,12 @@ ActiveRecord::Schema.define(version: 20140409191457) do
     t.integer  "flag_id"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "payment_type_id"
   end
 
   add_index "mechanize_store_payments", ["flag_id"], name: "index_mechanize_store_payments_on_flag_id"
   add_index "mechanize_store_payments", ["payment_status_id"], name: "index_mechanize_store_payments_on_payment_status_id"
+  add_index "mechanize_store_payments", ["payment_type_id"], name: "index_mechanize_store_payments_on_payment_type_id"
 
   create_table "mechanize_store_product_categories", force: true do |t|
     t.string   "name"

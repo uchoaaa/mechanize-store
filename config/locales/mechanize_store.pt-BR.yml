@@ -35,6 +35,7 @@ pt-BR:
             mechanize_store/order_status:
                 name: Nome
             mechanize_store/payment:
+                payment_type_id: "Tipo de pagamento"
                 payment_status_id: "Status do pagamento"
             mechanize_store/payment_status:
                 name: "Nome"
@@ -59,7 +60,9 @@ pt-BR:
                 flag: "Bandeira"
                 order: "Compra"
                 order_status: "Status de compra"
+                payment: "Pagamento"
                 payment_status: "Status de pagamento"
+                payment/payment_type: "Tipo de pagamento"
                 payment_type: "Tipo de pagamento"
                 product: "Produtos"
                 product_category: "Categoria de produto"

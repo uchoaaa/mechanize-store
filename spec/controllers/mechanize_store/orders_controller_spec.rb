@@ -5,8 +5,10 @@ module MechanizeStore
     routes { MechanizeStore::Engine.routes }
 
     before do
-        @payment = FactoryGirl.create(:mechanize_store_payment)
-        @order = FactoryGirl.create(:mechanize_store_order, payment: @payment)
+      @payment_type = FactoryGirl.create(:mechanize_store_payment_type)
+      @payment = FactoryGirl.create(:mechanize_store_payment, payment_type: @payment_type)
+      @order_status = FactoryGirl.create(:mechanize_store_order_status)
+      @order = FactoryGirl.create(:mechanize_store_order, payment: @payment, order_status: @order_status)
     end
 
     let(:valid_session) { {} }
@@ -14,6 +16,7 @@ module MechanizeStore
     describe "GET index" do
       it "assigns all order_statuses as @order_statuses" do
         get :index, {}, valid_session
+
         assigns(:orders).should eq([@order])
       end
     end
