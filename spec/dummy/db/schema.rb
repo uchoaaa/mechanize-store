@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140424193648) do
+ActiveRecord::Schema.define(version: 20140508135840) do
 
   create_table "mechanize_store_flags", force: true do |t|
     t.string   "name"
@@ -114,7 +114,7 @@ ActiveRecord::Schema.define(version: 20140424193648) do
     t.string   "short_description"
     t.float    "price"
     t.float    "weight"
-    t.float    "lenght"
+    t.float    "length"
     t.float    "height"
     t.integer  "product_category_id"
     t.datetime "created_at"

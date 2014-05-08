@@ -71,7 +71,7 @@ module MechanizeStore
 
     # Only allow a trusted parameter "white list" through.
     def product_params
-      params.require(:product).permit(:name, :description, :short_description, :price, :weight, :lenght, :height, :product_category_id)
+      params.require(:product).permit(:name, :description, :short_description, :price, :weight, :length, :height, :product_category_id)
     end
   end
 end

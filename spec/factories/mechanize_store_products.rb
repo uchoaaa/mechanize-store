@@ -7,8 +7,9 @@ FactoryGirl.define do
     short_description "MyString"
     price 1.5
     weight 1.5
-    lenght 1.5
+    length 1.5
     height 1.5
+    width 1.5
     product_category nil
   end
 end

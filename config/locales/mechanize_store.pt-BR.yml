@@ -44,7 +44,7 @@ pt-BR:
             mechanize_store/product:
                 description: Descrição
                 height: Altura
-                lenght: Comprimento
+                length: Comprimento
                 name: Nome
                 price: Preço
                 short_description: Resumo

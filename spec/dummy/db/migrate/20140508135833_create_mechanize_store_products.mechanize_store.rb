@@ -7,7 +7,7 @@ class CreateMechanizeStoreProducts < ActiveRecord::Migration
       t.string :short_description
       t.float :price
       t.float :weight
-      t.float :lenght
+      t.float :length
       t.float :height
       t.references :product_category, index: true
 

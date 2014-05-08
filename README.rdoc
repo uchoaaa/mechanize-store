@@ -2,6 +2,24 @@
 
 This project rocks and uses MIT-LICENSE.
 
+= Using custom layouts in default interface
+
+If you want customize laura layout, add this line above to your application.rb in you config.
+
+    config.to_prepare do
+        MechanizeStore::ApplicationController.layout "yourlayoutname"
+    end
+
+Your layout must have paths with this notation, or it will not works. Ex:
+
+    main_app.root_path
+
+Creates a yield for menu actions called :right. Ex:
+    
+    <ul>
+        <%= yield(:right) %>
+    </ul>
+
 These project was created to encapsulate a commom models of an MechanizeStore application, these model are:
 
 * Flag (For credit cards flag)
@@ -26,7 +44,7 @@ These project was created to encapsulate a commom models of an MechanizeStore ap
     - short_description
     - weight
     - height
-    - lenght
+    - length
     - product_category_id
 
 * ProductPhoto
