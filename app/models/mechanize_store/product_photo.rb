@@ -6,7 +6,7 @@ module MechanizeStore
         :styles => { :medium => "300x300>", :thumb => "100x100>" },
         :default_url => "/images/:style/missing.png",
         path: "#{Rails.root}/public/photos/:id/:style.:extension",
-        url: "/photos/:id/:style.:extension"#,
+        url: "/photos/:id/:style.:extension"
         # storage: :s3,
         # s3_credentials: "#{Rails.root}/config/amazon_s3.yml"
 
