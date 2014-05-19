@@ -6,9 +6,11 @@ module MechanizeStore
 
     before do
       @payment_type = FactoryGirl.create(:mechanize_store_payment_type)
-      @payment = FactoryGirl.create(:mechanize_store_payment, payment_type: @payment_type)
+      @flag = FactoryGirl.create(:mechanize_store_flag)
+      @payment = FactoryGirl.build(:mechanize_store_payment, payment_type: @payment_type, flag: @flag)
       @order_status = FactoryGirl.create(:mechanize_store_order_status)
-      @order = FactoryGirl.create(:mechanize_store_order, payment: @payment, order_status: @order_status)
+      @freight = FactoryGirl.create(:mechanize_store_freight)
+      @order = FactoryGirl.create(:mechanize_store_order, payment: @payment, order_status: @order_status, freight: @freight)
     end
 
     let(:valid_session) { {} }

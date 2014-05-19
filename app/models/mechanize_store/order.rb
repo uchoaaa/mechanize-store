@@ -15,6 +15,8 @@ module MechanizeStore
     before_create :set_defaults
     after_create :after_create
 
+    validates :payment, :order_status_id, :freight, presence: true
+
     def set_defaults
         self.order_status_id = OrderStatus::ACCOMPLISHED
     end

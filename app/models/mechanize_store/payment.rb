@@ -5,6 +5,12 @@ module MechanizeStore
         belongs_to :payment_type
         belongs_to :flag
 
-        validates_presence_of :payment_type_id
+        validates :payment_type_id, :flag_id, presence: true
+
+        before_create :before_create
+
+        def before_create
+            self.payment_status_id = PaymentStatus::AWAITING
+        end
     end
 end

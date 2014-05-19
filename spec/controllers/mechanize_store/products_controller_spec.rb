@@ -5,7 +5,7 @@ module MechanizeStore
 
     routes { MechanizeStore::Engine.routes }
 
-    let(:valid_attributes) { { "name" => "MyString" } }
+    let(:valid_attributes) { { "name" => "MyString", price: 10, width: 1, height: 2, length: 2, weight: 1, description: "Product description", short_description: "Short" } }
     let(:valid_session) { {} }
 
     describe "GET index" do

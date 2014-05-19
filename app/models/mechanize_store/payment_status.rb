@@ -1,6 +1,7 @@
 module MechanizeStore
     class PaymentStatus < ActiveRecord::Base
-
+        validates :name, presence: true
+        
         #ids inseridos na base de dados
         ACCOMPLISHED = 1
         IN_ANALISIS = 2
