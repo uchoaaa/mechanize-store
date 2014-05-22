@@ -11,6 +11,7 @@
     *= require_self
     *= require font-awesome
     *= require mechanize_store/sb-admin/bootstrap
+    *= require mechanize_store/sb-admin/jquery.fileupload
     *= require mechanize_store/sb-admin/sb-admin
     *= require mechanize_store/sb-admin/plugins/dataTables/dataTables.bootstrap
     *= require mechanize_store/sb-admin/plugins/morris/morris-0.4.3.min
