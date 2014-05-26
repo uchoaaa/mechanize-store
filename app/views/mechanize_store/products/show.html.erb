@@ -38,6 +38,10 @@
 	<h3><%= @product.height %></h3>
 </p>
 <p>
+    <small><%= t(:width, scope: "activerecord.attributes.mechanize_store.product") %>:</small>
+    <h3><%= @product.width %></h3>
+</p>
+<p>
 	<small><%= t(:product_category_id, scope: "activerecord.attributes.mechanize_store.product") %>:</small>
 	<h3><%= @product.product_category.name unless @product.product_category.nil? %></h3>
 </p>
