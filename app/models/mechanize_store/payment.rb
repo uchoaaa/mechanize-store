@@ -3,6 +3,8 @@ module MechanizeStore
         belongs_to :order
         belongs_to :flag
 
+        validates :flag_id, presence: true, :if => Proc.new{|p| p.payment_type_id == PaymentType::CREDIT_CARD }
+
         #ids inseridos na base de dados
         STATUSES = {
             1 => :accomplished,
