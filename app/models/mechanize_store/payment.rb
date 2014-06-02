@@ -5,7 +5,9 @@ module MechanizeStore
         belongs_to :payment_type
         belongs_to :flag
 
-        validates :payment_type_id, :flag_id, presence: true
+        validates :payment_type_id, presence: true
+
+        validates :flag_id, presence: true, :if => Proc.new{|p| p.payment_type_id == PaymentType::CREDIT_CARD }
 
         before_create :before_create
 
