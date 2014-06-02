@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140508135840) do
+ActiveRecord::Schema.define(version: 20140602124615) do
 
   create_table "mechanize_store_flags", force: true do |t|
     t.string   "name"
@@ -43,38 +43,20 @@ ActiveRecord::Schema.define(version: 20140508135840) do
   add_index "mechanize_store_order_items", ["order_id"], name: "index_mechanize_store_order_items_on_order_id"
   add_index "mechanize_store_order_items", ["product_id"], name: "index_mechanize_store_order_items_on_product_id"
 
-  create_table "mechanize_store_order_statuses", force: true do |t|
-    t.string   "name"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
   create_table "mechanize_store_orders", force: true do |t|
-    t.integer  "order_status_id"
+    t.integer  "order_status"
     t.integer  "store_id"
     t.datetime "delivery_date"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
-  add_index "mechanize_store_orders", ["order_status_id"], name: "index_mechanize_store_orders_on_order_status_id"
+  add_index "mechanize_store_orders", ["order_status"], name: "index_mechanize_store_orders_on_order_status"
   add_index "mechanize_store_orders", ["store_id"], name: "index_mechanize_store_orders_on_store_id"
-
-  create_table "mechanize_store_payment_statuses", force: true do |t|
-    t.string   "name"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  create_table "mechanize_store_payment_types", force: true do |t|
-    t.string   "name"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
 
   create_table "mechanize_store_payments", force: true do |t|
     t.integer  "order_id"
-    t.integer  "payment_status_id"
+    t.integer  "payment_status"
     t.float    "value"
     t.float    "paid_value"
     t.datetime "paid_in"
@@ -82,12 +64,12 @@ ActiveRecord::Schema.define(version: 20140508135840) do
     t.integer  "flag_id"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.integer  "payment_type_id"
+    t.integer  "payment_type"
   end
 
   add_index "mechanize_store_payments", ["flag_id"], name: "index_mechanize_store_payments_on_flag_id"
-  add_index "mechanize_store_payments", ["payment_status_id"], name: "index_mechanize_store_payments_on_payment_status_id"
-  add_index "mechanize_store_payments", ["payment_type_id"], name: "index_mechanize_store_payments_on_payment_type_id"
+  add_index "mechanize_store_payments", ["payment_status"], name: "index_mechanize_store_payments_on_payment_status"
+  add_index "mechanize_store_payments", ["payment_type"], name: "index_mechanize_store_payments_on_payment_type"
 
   create_table "mechanize_store_product_categories", force: true do |t|
     t.string   "name"

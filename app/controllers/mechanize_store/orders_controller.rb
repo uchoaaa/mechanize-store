@@ -7,8 +7,8 @@ module MechanizeStore
         before_action :fetch_collections, only: [:index]
 
         def fetch_collections
-            @order_statuses = OrderStatus.all
-            @payment_statuses = PaymentStatus.all
+            @order_statuses = Order.statuses_collection
+            @payment_statuses = Payment.statuses_collection
         end
 
         def index
