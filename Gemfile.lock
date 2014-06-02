@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    mechanize_store (0.0.7)
+    mechanize_store (0.0.8)
       bootstrap-sass (~> 3.1)
       bootstrap-will_paginate (= 0.0.10)
       font-awesome-rails (= 4.0.3.1)
@@ -101,7 +101,7 @@ GEM
       mime-types
     polyamorous (0.6.4)
       activerecord (>= 3.0)
-    polyglot (0.3.4)
+    polyglot (0.3.5)
     rack (1.5.2)
     rack-test (0.6.2)
       rack (>= 1.0)

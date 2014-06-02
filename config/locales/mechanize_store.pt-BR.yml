@@ -12,6 +12,25 @@ pt-BR:
     products_list: "Lista de produtos"
     search: "Buscar"
 
+    order_statuses:
+        accomplished: Efetuada
+        submited: Aguardando
+        delivered: Entregue
+        canceled: Cancelada
+
+    payment_statuses:
+        accomplished: Efetuado
+        in_analisis: Em análise
+        awaiting: Aguardando pagamento
+        canceled: Cancelado
+        unauthorized: Não autorizado
+        need_authorization: Necessita de autorização
+
+    payment_types:
+        credit_card: Cartão de crédito
+        debit_card: Cartão de débito
+        billet: Boleto
+
     helpers:
         select:
             prompt: Por favor selecione
@@ -31,16 +50,12 @@ pt-BR:
                 created_at: "Criada em"
                 delivery_date: "Data da entrega"
                 generated_at: "Gerada em"
-                order_status_id: "Status da compra"
+                order_status: "Status da compra"
             mechanize_store/order_status:
                 name: Nome
             mechanize_store/payment:
-                payment_type_id: "Tipo de pagamento"
-                payment_status_id: "Status do pagamento"
-            mechanize_store/payment_status:
-                name: "Nome"
-            mechanize_store/payment_type:
-                name: "Nome"
+                payment_type: "Tipo de pagamento"
+                payment_status: "Status do pagamento"
             mechanize_store/product:
                 description: Descrição
                 height: Altura

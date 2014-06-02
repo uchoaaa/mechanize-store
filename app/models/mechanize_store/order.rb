@@ -1,6 +1,13 @@
 module MechanizeStore
   class Order < ActiveRecord::Base
-    belongs_to :order_status
+
+    STATUSES = {
+        1 => :accomplished,
+        2 => :submited, 
+        3 => :delivered,
+        4 => :canceled
+    }
+
     belongs_to :store
 
     has_one :payment
@@ -15,10 +22,20 @@ module MechanizeStore
     before_create :set_defaults
     after_create :after_create
 
-    validates :payment, :order_status_id, :freight, presence: true
+    validates :payment, :order_status, :freight, presence: true
+
+    def self.statuses_collection
+        statuses_collection = []
+
+        STATUSES.each_pair do |key, value|
+            statuses_collection << [I18n.t(value, scope: "order_statuses"), key]
+        end
+
+        return statuses_collection
+    end
 
     def set_defaults
-        self.order_status_id = OrderStatus::ACCOMPLISHED
+        self.order_status = STATUSES.invert[:submited]
     end
 
     def after_create
