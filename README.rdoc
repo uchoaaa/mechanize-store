@@ -25,15 +25,6 @@ These project was created to encapsulate a commom models of an MechanizeStore ap
 * Flag (For credit cards flag)
     - name
 
-* PaymentType (ex: :credit, :debit, :billet)
-    - name
-
-* PaymentStatus (ex: :paid, :awayting, :canceled)
-    - name
-
-* OrderStatus (ex: :accomplished, :delivered, :canceled)
-    - name 
-
 * ProductCategory
     - name
 
@@ -57,10 +48,11 @@ These project was created to encapsulate a commom models of an MechanizeStore ap
     - paid_value
     - paid_in
     - flag_id
-    - payment_status_id
+    - payment_status
+    - payment_type
 
 * Order
-    - order_status_id
+    - order_status
     - store
     - delivery_date
 
