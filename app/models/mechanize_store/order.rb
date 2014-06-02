@@ -24,6 +24,10 @@ module MechanizeStore
 
     validates :payment, :order_status, :freight, presence: true
 
+    def order_status_str
+        return I18n.t(STATUSES[self.order_status], scope: "order_status")
+    end
+
     def self.statuses_collection
         statuses_collection = []
 

@@ -23,6 +23,14 @@ module MechanizeStore
 
         before_create :before_create
 
+        def payment_status_str
+            return I18n.t(STATUSES[self.payment_status], scope: "order_status")
+        end
+
+        def payment_type_str
+            return I18n.t(TYPES[self.payment_type], scope: "payment_types")
+        end
+
         def self.statuses_collection
             statuses_collection = []
 
