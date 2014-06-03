@@ -12,13 +12,13 @@ pt-BR:
     products_list: "Lista de produtos"
     search: "Buscar"
 
-    order_statuses:
+    order_status:
         accomplished: Efetuada
         submited: Aguardando
         delivered: Entregue
         canceled: Cancelada
 
-    payment_statuses:
+    payment_status:
         accomplished: Efetuado
         in_analisis: Em análise
         awaiting: Aguardando pagamento
@@ -51,6 +51,7 @@ pt-BR:
                 delivery_date: "Data da entrega"
                 generated_at: "Gerada em"
                 order_status: "Status da compra"
+                track_code: Código de rastreamento
             mechanize_store/order_status:
                 name: Nome
             mechanize_store/payment:
@@ -62,10 +63,13 @@ pt-BR:
                 length: Comprimento
                 name: Nome
                 price: Preço
+                product_category_id: "Categoria"
+                quantity: Quantidade
                 short_description: Resumo
+                total_value: Valor total
+                unit_value: Valor unitário
                 weight: Peso
                 width: Largura
-                product_category_id: "Categoria"
             mechanize_store/product_category:
                 name: "Nome"
                 product_category: "Categoria de produto"
@@ -73,6 +77,7 @@ pt-BR:
         models:
             mechanize_store:
                 flag: "Bandeira"
+                freight: Frete
                 order: "Compra"
                 order_status: "Status de compra"
                 payment: "Pagamento"
