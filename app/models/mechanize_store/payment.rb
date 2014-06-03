@@ -3,7 +3,7 @@ module MechanizeStore
         belongs_to :order
         belongs_to :flag
 
-        validates :flag_id, presence: true, :if => Proc.new{|p| p.payment_type == Payment::TYPES.invert[:credit_card] }
+        # validates :flag_id, presence: true, :if => Proc.new{|p| p.payment_type == Payment::TYPES.invert[:credit_card] }
 
         #ids inseridos na base de dados
         STATUSES = {
@@ -21,12 +21,12 @@ module MechanizeStore
             3 => :billet
         }
 
-        validates :payment_type, :flag_id, presence: true
+        validates :payment_type, presence: true
 
         before_create :before_create
 
         def payment_status_str
-            return I18n.t(STATUSES[self.payment_status], scope: "order_status")
+            return I18n.t(STATUSES[self.payment_status], scope: "payment_statuses")
         end
 
         def payment_type_str

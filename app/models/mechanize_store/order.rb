@@ -22,10 +22,10 @@ module MechanizeStore
     before_create :set_defaults
     after_create :after_create
 
-    validates :payment, :order_status, :freight, presence: true
+    validates :payment, :freight, presence: true
 
     def order_status_str
-        return I18n.t(STATUSES[self.order_status], scope: "order_status")
+        return I18n.t(STATUSES[self.order_status], scope: "order_statuses")
     end
 
     def self.statuses_collection
