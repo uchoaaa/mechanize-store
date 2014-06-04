@@ -11,8 +11,7 @@ module MechanizeStore
             2 => :in_analisis,
             3 => :awaiting,
             4 => :canceled,
-            5 => :unauthorized,
-            6 => :need_authorization
+            5 => :unauthorized
         }
         
         TYPES = {
@@ -24,6 +23,19 @@ module MechanizeStore
         validates :payment_type, presence: true
 
         before_create :before_create
+
+        def confirm!
+            Payment.transaction do
+                self.update_attributes(payment_status: STATUSES.invert[:accomplished], paid_in: Time.now)
+                self.order.update_attribute(:order_status, Order::STATUSES.invert[:accomplished])
+            end
+        end
+
+        def decline!
+            Payment.transaction do
+                self.update_attributes(payment_status: STATUSES.invert[:unauthorized])
+            end 
+        end
 
         def payment_status_str
             return I18n.t(STATUSES[self.payment_status], scope: "payment_statuses")
