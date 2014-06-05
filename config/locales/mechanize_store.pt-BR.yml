@@ -73,6 +73,7 @@ pt-BR:
             mechanize_store/product_category:
                 name: "Nome"
                 product_category: "Categoria de produto"
+                sub_product_category: "Sub-categorias de produto"
 
         models:
             mechanize_store:
