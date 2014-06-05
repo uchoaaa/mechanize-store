@@ -10,17 +10,14 @@ gemspec
 # Git. Remember to move these dependencies to your gemspec before releasing
 # your gem to rubygems.org.
 
-# To use debugger
-gem 'debugger'
 gem 'simple_form'
 gem 'rspec-rails'
 gem 'factory_girl_rails'
 gem 'ransack'
 gem 'will_paginate'
 gem 'bootstrap-will_paginate'
-gem 'font-awesome-rails'
+gem 'font-awesome-rails', '~> 4.1.0.0'
 gem 'paperclip', '3.5.3'
-
 gem 'jquery-rails'
 gem 'jquery-turbolinks'
 gem 'turbolinks'
