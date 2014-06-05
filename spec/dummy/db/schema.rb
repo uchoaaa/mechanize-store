@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140602124615) do
+ActiveRecord::Schema.define(version: 20140605213358) do
 
   create_table "mechanize_store_flags", force: true do |t|
     t.string   "name"
@@ -76,6 +76,7 @@ ActiveRecord::Schema.define(version: 20140602124615) do
     t.integer  "product_category_id"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "slug"
   end
 
   create_table "mechanize_store_product_photos", force: true do |t|
