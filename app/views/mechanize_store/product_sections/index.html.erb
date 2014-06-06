@@ -1,0 +1,46 @@
+<%= title t("product_section", scope: "activerecord.models").pluralize %>
+
+<% content_for :right do -%>
+  <li class="active">
+    <%= link_to t("new_product_section"), new_product_section_path %>
+  </li>
+<% end -%>
+
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th><%= sort_link @search, :id, t(:id, scope: "activerecord.attributes") %></th>
+      <th><%= sort_link @search, :name, t(:name, scope: "activerecord.attributes.product_section") %></th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+
+    <% @product_sections.each do |product_section| %>
+      <tr>
+        <td><%= product_section.id %></td>
+        <td><%= product_section.name %></td>
+        <td>
+          <%= link_to product_section do %>
+            <i class="fa fa-file"></i>
+          <% end -%>
+        </td>
+        <td>
+          <%= link_to edit_product_section_path(product_section) do %>
+            <i class="fa fa-edit"></i>
+          <% end -%>
+        </td>
+        <td>
+          <%= link_to product_section, method: :delete, data: { confirm: t(:are_you_sure) } do %>
+            <i class="fa fa-trash"></i>
+          <% end -%>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= will_paginate @product_sections %>

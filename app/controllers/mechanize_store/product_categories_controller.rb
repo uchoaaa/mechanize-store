@@ -5,7 +5,7 @@ module MechanizeStore
     respond_to :html, :json, :xml
 
     def index
-      @search = ProductCategory.orphans.search(params[:q])
+      @search = ProductCategory.search(params[:q])
 
       @product_categories = @search.result.paginate(page: params[:page])
 

@@ -1,8 +1,7 @@
 # Read about factories at https://github.com/thoughtbot/factory_girl
 
 FactoryGirl.define do
-  factory :mechanize_store_product_category, :class => 'ProductCategory' do
+  factory :mechanize_store_product_section, :class => 'ProductSection' do
     name "MyString"
-    product_section
   end
 end

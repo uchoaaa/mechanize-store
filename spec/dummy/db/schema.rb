@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140605213358) do
+ActiveRecord::Schema.define(version: 20140606130912) do
 
   create_table "mechanize_store_flags", force: true do |t|
     t.string   "name"
@@ -77,6 +77,7 @@ ActiveRecord::Schema.define(version: 20140605213358) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "slug"
+    t.integer  "product_section_id"
   end
 
   create_table "mechanize_store_product_photos", force: true do |t|
@@ -90,6 +91,13 @@ ActiveRecord::Schema.define(version: 20140605213358) do
   end
 
   add_index "mechanize_store_product_photos", ["product_id"], name: "index_mechanize_store_product_photos_on_product_id"
+
+  create_table "mechanize_store_product_sections", force: true do |t|
+    t.string   "name"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "slug"
+  end
 
   create_table "mechanize_store_products", force: true do |t|
     t.string   "name"

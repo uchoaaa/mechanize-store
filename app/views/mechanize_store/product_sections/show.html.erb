@@ -1,0 +1,15 @@
+<%= title t("product_section") %>
+
+<% content_for :right do -%>
+	<li class="active">
+		<%= link_to t(:edit), edit_product_section_path(@product_section) %>
+	</li>
+	<li class="active">
+		<%= link_to t(:back), product_sections_path %>
+	</li>
+<% end -%>
+
+	<p>
+	  <small><%= t(:name, scope: "activerecord.attributes.product_section") %>:</small>
+	  <h3><%= @product_section.name %></h3>
+	</p>

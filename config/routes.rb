@@ -1,4 +1,6 @@
 MechanizeStore::Engine.routes.draw do
+  
+    resources :product_sections
     resources :product_categories
     resources :products do 
         resources :product_photos, shallow: true
