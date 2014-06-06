@@ -16,8 +16,7 @@ module MechanizeStore
         
         TYPES = {
             1 => :credit_card, 
-            2 => :debit_card, 
-            3 => :billet
+            2 => :billet
         }
 
         validates :payment_type, presence: true
@@ -73,7 +72,7 @@ module MechanizeStore
             return "success" if self.payment_status == STATUSES.invert[:accomplished]
             return "warning" if self.payment_status == STATUSES.invert[:awaiting] or self.payment_status == STATUSES.invert[:in_analisis]
             return "info" if self.payment_status == STATUSES.invert[:canceled] 
-            return "danger" if self.payment_type == STATUSES.invert[:unauthorized] or self.payment_status = STATUSES.invert[:need_authorization]
+            return "danger" if self.payment_status == STATUSES.invert[:unauthorized] or self.payment_status == STATUSES.invert[:need_authorization]
         end
     end
 end
