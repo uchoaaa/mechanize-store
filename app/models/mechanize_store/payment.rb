@@ -48,7 +48,7 @@ module MechanizeStore
             statuses_collection = []
 
             STATUSES.each_pair do |key, value|
-                statuses_collection << [I18n.t(value, scope: "payment_statuses")]
+                statuses_collection << [I18n.t(value, scope: "payment_statuses"), key]
             end
 
             return statuses_collection 
