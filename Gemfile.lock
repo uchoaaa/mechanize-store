@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    mechanize_store (0.0.16)
+    mechanize_store (0.0.17)
       bootstrap-sass (~> 3.1)
       bootstrap-will_paginate (= 0.0.10)
       font-awesome-rails (= 4.1.0.0)
