@@ -14,11 +14,11 @@ module MechanizeStore
         end
 
         def set_defaults
-          self.slug = self.name.parameterize
+          self.slug = "#{self.id}-#{self.name.parameterize}"
         end
 
         def create_slug
-          self.update_attributes(:slug => self.name.parameterize)
+          self.update_attributes(:slug => "#{self.id}-#{self.name.parameterize}")
         end
     end
 end
