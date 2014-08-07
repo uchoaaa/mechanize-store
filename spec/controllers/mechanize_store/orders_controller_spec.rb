@@ -7,7 +7,7 @@ module MechanizeStore
     before do
       @flag = FactoryGirl.create(:mechanize_store_flag)
       @payment = FactoryGirl.build(:mechanize_store_payment, payment_type: Payment::TYPES.invert[:credit_card], flag: @flag)
-      @freight = FactoryGirl.create(:mechanize_store_freight)
+      @freight = FactoryGirl.build(:mechanize_store_freight)
       @order = FactoryGirl.create(:mechanize_store_order, payment: @payment, order_status: Order::STATUSES.invert[:submited], freight: @freight)
     end
 

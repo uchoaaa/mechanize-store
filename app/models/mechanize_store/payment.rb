@@ -16,7 +16,8 @@ module MechanizeStore
         
         TYPES = {
             1 => :credit_card, 
-            2 => :billet
+            2 => :billet,
+            3 => :cash
         }
 
         validates :payment_type, presence: true

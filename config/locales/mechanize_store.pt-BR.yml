@@ -30,6 +30,7 @@ pt-BR:
         credit_card: Cartão de crédito
         debit_card: Cartão de débito
         billet: Boleto
+        cash: "À vista"
 
     helpers:
         select:
@@ -74,7 +75,8 @@ pt-BR:
                 name: "Nome"
                 product_category: "Categoria de produto"
                 sub_product_category: "Sub-categorias de produto"
-
+            mechanize_store/freight:
+                freight_type: "Tipo de entrega"
         models:
             mechanize_store:
                 flag: "Bandeira"

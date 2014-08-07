@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140721124512) do
+ActiveRecord::Schema.define(version: 20140806143246) do
 
   create_table "mechanize_store_flags", force: true do |t|
     t.string   "name"
@@ -27,6 +27,7 @@ ActiveRecord::Schema.define(version: 20140721124512) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "delivery_time"
+    t.integer  "freight_type"
   end
 
   add_index "mechanize_store_freights", ["order_id"], name: "index_mechanize_store_freights_on_order_id"
@@ -51,6 +52,7 @@ ActiveRecord::Schema.define(version: 20140721124512) do
     t.datetime "delivery_date"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.boolean  "has_freight",   default: false
   end
 
   add_index "mechanize_store_orders", ["order_status"], name: "index_mechanize_store_orders_on_order_status"

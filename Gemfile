@@ -24,3 +24,7 @@ gem 'turbolinks'
 gem 'sass-rails'
 gem 'bootstrap-sass', '~> 3.1.1'
 gem 'jbuilder', '~> 1.2'
+
+group :development, :test do 
+    gem 'byebug'
+end
