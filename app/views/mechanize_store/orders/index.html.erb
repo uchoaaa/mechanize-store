@@ -5,17 +5,17 @@
     <div class="form-group">
         <div class="row">
           <div class="col-lg-2">
-            <%= f.select :order_status_eq, options_for_select(@order_statuses.collect{|c| [c.name, c.id]}, params[:q][:order_status_eq].to_i), { :include_blank => t(:order_status, scope: "activerecord.models.mechanize_store") }, { class: "form-control" } %>
+            <%#= f.select :order_status_eq, options_for_select(@order_statuses.collect{|c| [c.name, c.id]}, params[:q][:order_status_eq].to_i), { :include_blank => t(:order_status, scope: "activerecord.models.mechanize_store") }, { class: "form-control" } %>
           </div>
 
           <div class="col-lg-2">
-            <%= f.select :payment_payment_status_eq, options_for_select(@payment_statuses.collect{|c| [c.name, c.id]}, params[:q][:payment_payment_status_eq].to_i), { :include_blank => t(:payment_status, scope: "activerecord.models.mechanize_store") }, { class: "form-control" } %>
+            <%#= f.select :payment_payment_status_eq, options_for_select(@payment_statuses.collect{|c| [c.name, c.id]}, params[:q][:payment_payment_status_eq].to_i), { :include_blank => t(:payment_status, scope: "activerecord.models.mechanize_store") }, { class: "form-control" } %>
           </div>
 
           <div class="col-lg-2">
             <div class="form-group">
               <div class="input-group">
-                <%= f.text_field :created_at_gteq, alt: 'date', placeholder: t(:date_begin), value: params[:q][:created_at_gteq], as: :string, class: "datepicker form-control" %>
+                <%#= f.text_field :created_at_gteq, alt: 'date', placeholder: t(:date_begin), value: params[:q][:created_at_gteq], as: :string, class: "datepicker form-control" %>
                 <span class="input-group-addon">
                   <i class="fa fa-calendar" data-time-icon="fa fa-time" data-date-icon="fa fa-calendar"></i>
                 </span>
@@ -26,7 +26,7 @@
           <div class="col-lg-2">
             <div class="form-group">
               <div class="input-group">
-                <%= f.text_field :created_at_lteq, alt: 'date', placeholder: t(:date_end), value: params[:q][:created_at_lteq], as: :string, class: "datepicker form-control" %>
+                <%#= f.text_field :created_at_lteq, alt: 'date', placeholder: t(:date_end), value: params[:q][:created_at_lteq], as: :string, class: "datepicker form-control" %>
                 <span class="input-group-addon">
                   <i class="fa fa-calendar" data-time-icon="fa fa-time" data-date-icon="fa fa-calendar"></i>
                 </span>
