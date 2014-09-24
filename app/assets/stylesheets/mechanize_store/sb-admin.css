@@ -1,22 +1,12 @@
 /*
- * This is a manifest file that'll be compiled into application.css, which will include all the files
- * listed below.
- *
- * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
- * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
- *
- * You're free to add application-wide styles to this file and they'll appear at the top of the
- * compiled file, but it's generally better to create a new file per style scope.
- *
-    *= require_self
-    *= require font-awesome
-    *= require mechanize_store/sb-admin/bootstrap
-    *= require mechanize_store/sb-admin/jquery.fileupload
-    *= require mechanize_store/sb-admin/sb-admin
-    *= require mechanize_store/sb-admin/plugins/dataTables/dataTables.bootstrap
-    *= require mechanize_store/sb-admin/plugins/morris/morris-0.4.3.min
-    *= require mechanize_store/sb-admin/plugins/social-buttons/social-buttons
-    *= require mechanize_store/sb-admin/plugins/timeline/timeline
+ *= require font-awesome
+ *= require mechanize_store/sb-admin/bootstrap
+ *= require mechanize_store/sb-admin/jquery.fileupload
+ *= require mechanize_store/sb-admin/plugins/dataTables/dataTables.bootstrap
+ *= require mechanize_store/sb-admin/plugins/morris/morris-0.4.3.min
+ *= require mechanize_store/sb-admin/plugins/social-buttons/social-buttons
+ *= require mechanize_store/sb-admin/plugins/timeline/timeline
+ *= require_self
  */
 
 table {
