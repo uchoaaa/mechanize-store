@@ -1,5 +1,6 @@
 MechanizeStore::Engine.routes.draw do
   
+  get "dashboard/show"
     resources :product_sections
     resources :product_categories
     resources :products do 

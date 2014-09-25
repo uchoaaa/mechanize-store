@@ -10,3 +10,5 @@ spec/dummy/public/*/**
 *.gem
 .DS_Store
 */**/.DS_Store
+test/dummy/tmp/pids/server.pid
+*/**/*.log
