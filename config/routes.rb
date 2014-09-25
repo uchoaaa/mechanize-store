@@ -1,6 +1,7 @@
 MechanizeStore::Engine.routes.draw do
 
-  resource  :dashboard, only: :show
+  root 'dashboards#show'
+
   resources :product_sections
   resources :product_categories
   resources :products do 

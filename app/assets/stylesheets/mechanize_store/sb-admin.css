@@ -1,4 +1,7 @@
 /*
+ *= require bootstrap
+ *= require font-awesome
+ *= require_tree ./sb-admin
  *= require_self
  */
 
