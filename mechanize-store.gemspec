@@ -30,6 +30,8 @@ Gem::Specification.new do |s|
   s.add_dependency 'sass-rails', '~> 4.0'
   s.add_dependency 'bootstrap-sass', '~> 3.1'
   s.add_dependency 'jbuilder', '~> 1.2'
+  s.add_dependency 'jbuilder', '~> 1.2'
+  s.add_dependency 'common_helpers'
   
   s.add_development_dependency 'sqlite3', '1.3.9'
   s.add_development_dependency 'guard-livereload'

@@ -4,7 +4,9 @@ PATH
     mechanize_store (0.0.19)
       bootstrap-sass (~> 3.1)
       bootstrap-will_paginate (= 0.0.10)
+      common_helpers
       font-awesome-rails (= 4.1.0.0)
+      jbuilder (~> 1.2)
       jbuilder (~> 1.2)
       jquery-rails (~> 3.1)
       jquery-turbolinks (~> 2.0)
@@ -15,6 +17,12 @@ PATH
       simple_form (= 3.0.1)
       turbolinks (~> 2.2)
       will_paginate (= 3.0.5)
+
+PATH
+  remote: /Users/rafaeluchoa/workspace/common_helpers
+  specs:
+    common_helpers (0.0.4)
+      rails (~> 4)
 
 GEM
   remote: https://rubygems.org/
@@ -207,6 +215,7 @@ DEPENDENCIES
   bootstrap-sass (~> 3.1.1)
   bootstrap-will_paginate
   byebug
+  common_helpers!
   factory_girl_rails
   font-awesome-rails (~> 4.1.0.0)
   guard-livereload

@@ -26,6 +26,8 @@ gem 'sass-rails'
 gem 'bootstrap-sass', '~> 3.1.1'
 gem 'jbuilder', '~> 1.2'
 
+gem 'common_helpers', path: '/Users/rafaeluchoa/workspace/common_helpers'
+
 group :development, :test do 
     gem 'byebug'
 end
