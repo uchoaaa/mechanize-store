@@ -5,6 +5,8 @@ module MechanizeStore
     respond_to :html, :json, :xml
 
     def index
+      active_menu :products
+
       @search = Product.search(params[:q])
 
       @products = @search.result.paginate(page: params[:page])

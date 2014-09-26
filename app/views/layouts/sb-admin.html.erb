@@ -40,8 +40,12 @@
 
 			<div class="collapse navbar-collapse navbar-ex1-collapse">
 				<ul class="nav navbar-nav side-nav">
-					<%= common_link_to 'Products', '#', icon: :cubes, 	menu: :products  %>
-					<%= common_link_to 'Orders', 	 '#', icon: :star, 		menu: :orders  %>
+					<%= common_link_to 'Dashboard', 		'#', icon: :dashboard, menu: :dashboard %>
+					<%= common_link_to 'Compras',				'#', icon: 'shopping-cart', menu: :orders %>
+					<%= common_link_to 'Clientes', 			'#', icon: :users,	menu: :clients  %>
+					<%= common_link_to 'Financeiro', 		'#', icon: :money, 	menu: :finance  %>
+					<%= common_link_to 'Produtos', 			'#', icon: :cubes,	menu: :products %>
+					<%= common_link_to 'Configurações',	'#', icon: :cogs,		menu: :configs  %>
 				</ul>
 			</div>
        <!-- /.navbar-collapse -->
