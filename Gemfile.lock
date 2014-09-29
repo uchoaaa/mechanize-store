@@ -21,7 +21,7 @@ PATH
 PATH
   remote: /Users/rafaeluchoa/workspace/common_helpers
   specs:
-    common_helpers (0.0.4)
+    common_helpers (0.0.5)
       rails (~> 4)
 
 GEM
