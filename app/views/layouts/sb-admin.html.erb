@@ -40,28 +40,15 @@
 
 			<div class="collapse navbar-collapse navbar-ex1-collapse">
 				<ul class="nav navbar-nav side-nav">
-					<%= common_menu 'Dashboard', 		'#', icon: :dashboard, menu: :dashboard %>
-					<%= common_menu 'Compras',				'#', icon: 'shopping-cart', menu: :orders %>
+					<%= common_menu 'Dashboard', 			dashboard_path, icon: :dashboard, menu: :dashboard %>
+					<%= common_menu 'Compras',				orders_path, icon: 'shopping-cart', menu: :orders %>
 					<%= common_menu 'Clientes', 			'#', icon: :users,	menu: :clients  %>
 					<%= common_menu 'Financeiro', 		'#', icon: :money, 	menu: :finance  %>
-					<%= common_menu 'Produtos', 			'#', icon: :cubes,	menu: :products %>
+					<%= common_menu 'Produtos', 			products_path, icon: :cubes,	menu: :products %>
 					<%= common_menu 'Configurações',	'#', icon: :cogs,		menu: :configs do %>
-						<% common_sub_menu 'Uma configuração', '#' %>
-						<% common_sub_menu 'Outra configuração', '#', icon: :star %>
+						<% common_sub_menu 'Categoria de produtos', product_categories_path %>
+						<% common_sub_menu 'Seção de produtos', 		product_sections_path   %>
 					<% end %>
-					
-					<li>
-						<a href="javascript:;" data-toggle="collapse" data-target="#demo"><i class="fa fa-fw fa-arrows-v"></i> Dropdown <i class="fa fa-fw fa-caret-down"></i></a>
-						<ul id="demo" class="collapse">
-							<li>
-								<a href="#">Dropdown Item</a>
-							</li>
-							<li>
-								<a href="#">Dropdown Item</a>
-							</li>
-						</ul>
-					</li>
-					
 				</ul>
 			</div>
        <!-- /.navbar-collapse -->

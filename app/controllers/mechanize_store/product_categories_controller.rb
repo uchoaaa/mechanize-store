@@ -1,6 +1,7 @@
 module MechanizeStore
   class ProductCategoriesController < ApplicationController
     before_action :set_product_category, only: [:show, :edit, :update, :destroy]
+    before_action -> { active_menu :configs }
 
     respond_to :html, :json, :xml
 
@@ -57,7 +58,7 @@ module MechanizeStore
 
     def destroy
       @product_category = ProductCategory.find(params[:id])
-      
+
       flash[:alert] = I18n.t(:removed, model: I18n.t(:product_category, scope: "activerecord.models")) if @product_category.destroy
 
       respond_with @product_category, :location => product_categories_url
@@ -71,7 +72,7 @@ module MechanizeStore
 
     # Only allow a trusted parameter "white list" through.
     def product_category_params
-      params.require(:product_category).permit(:name, :product_category_id)
+      params.require(:product_category).permit(:name, :product_section_id)
     end
   end
 end

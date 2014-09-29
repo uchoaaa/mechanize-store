@@ -1,12 +1,11 @@
 module MechanizeStore
   class ProductsController < ApplicationController
     before_action :set_product, only: [:show, :edit, :update, :destroy]
+    before_action -> { active_menu :products }
 
     respond_to :html, :json, :xml
 
     def index
-      active_menu :products
-
       @search = Product.search(params[:q])
 
       @products = @search.result.paginate(page: params[:page])

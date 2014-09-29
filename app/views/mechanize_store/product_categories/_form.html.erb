@@ -1,10 +1,10 @@
 <%= simple_form_for(@product_category) do |f| %>
   <%= f.error_notification %>
 
-  <div class="form-group">
-        <%= f.input :name %>
-        <%= f.association :product_category %>
-  </div>
+	<div class="form-group">
+		<%= f.input :name %>
+		<%= f.association :product_section %>
+	</div>
 
   <div class="form-actions">
     <%= f.button :submit, class: "btn btn-primary" %>

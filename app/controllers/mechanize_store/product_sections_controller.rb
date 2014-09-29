@@ -1,6 +1,7 @@
 module MechanizeStore
   class ProductSectionsController < ApplicationController
     before_action :set_product_section, only: [:show, :edit, :update, :destroy]
+    before_action -> { active_menu :configs }
 
     respond_to :html, :json, :xml
 

@@ -1,11 +1,5 @@
 <%= title t("product", scope: "activerecord.models.mechanize_store").pluralize %>
 
-<% content_for :right do -%>
-  <li class="active">
-    <%= link_to t("new_product"), new_product_path %>
-  </li>
-<% end -%>
-
 <h1><%= t("product", scope: "activerecord.models.mechanize_store").pluralize %></h1>
 
 <table class="table table-striped">
@@ -50,3 +44,7 @@
 <br>
 
 <%= will_paginate @products %>
+
+
+<%= common_link_to 'Cadastrar novo Produto', new_product_path, icon: 'plus-circle', btn: true, class: 'btn', style: 'primary'  %>
+
