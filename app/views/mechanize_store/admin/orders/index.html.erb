@@ -1,7 +1,7 @@
 <%= title t(:order, scope: "activerecord.models.mechanize_store").pluralize %>
 
 <div class="well">
-  <%= search_form_for @search, :html => { :method => :get } do |f| %>
+  <%= search_form_for [:admin, @search], :html => { :method => :get } do |f| %>
     <div class="form-group">
         <div class="row">
           <div class="col-lg-2">

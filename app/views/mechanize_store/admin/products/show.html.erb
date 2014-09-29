@@ -1,14 +1,5 @@
 <%= title t("product") %>
 
-<% content_for :right do -%>
-	<li class="active">
-		<%= link_to t(:edit), edit_product_path(@product) %>
-	</li>
-	<li class="active">
-		<%= link_to t(:back), products_path %>
-	</li>
-<% end -%>
-
 <p>
 	<small><%= t(:name, scope: "activerecord.attributes.mechanize_store.product") %>:</small>
 	<h3><%= @product.name %></h3>
@@ -184,7 +175,7 @@
 <script type="text/javascript">
     jQuery(document).ready(function($) {
         $('#fileupload').fileupload({
-            url: '<%= product_product_photos_path(@product) %>',
+            url: '<%= admin_product_product_photos_path(@product) %>',
             authenticity_token:  "<%= form_authenticity_token %>",
             dataType: "json"
         });

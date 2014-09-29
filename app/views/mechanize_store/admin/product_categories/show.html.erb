@@ -1,14 +1,4 @@
 <%= title t("product_category") %>
-
-<% content_for :right do -%>
-	<li class="active">
-		<%= link_to t(:edit), edit_product_category_path(@product_category) %>
-	</li>
-	<li class="active">
-		<%= link_to t(:back), product_categories_path %>
-	</li>
-<% end -%>
-
 	<p>
 	  <small><%= t(:name, scope: "activerecord.attributes.product_category") %>:</small>
 	  <h3><%= @product_category.name %></h3>

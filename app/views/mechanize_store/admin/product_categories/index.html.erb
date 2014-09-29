@@ -1,11 +1,5 @@
 <%= title t("product_category", scope: "activerecord.models.mechanize_store").pluralize %>
 
-<% content_for :right do -%>
-  <li class="active">
-    <%= link_to t("new_product_category"), new_product_category_path %>
-  </li>
-<% end -%>
-
 <table class="table table-striped">
   <thead>
     <tr>
@@ -20,17 +14,17 @@
         <td><%= product_category.id %></td>
         <td><%= product_category.name %></td>
         <td>
-          <%= link_to product_category do %>
+          <%= link_to [:admin, product_category] do %>
             <i class="fa fa-file"></i>
           <% end -%>
         </td>
         <td>
-          <%= link_to edit_product_category_path(product_category) do %>
+          <%= link_to edit_admin_product_category_path(product_category) do %>
             <i class="fa fa-edit"></i>
           <% end -%>
         </td>
         <td>
-          <%= link_to product_category, method: :delete, data: { confirm: t(:are_you_sure) } do %>
+          <%= link_to [:admin, product_category], method: :delete, data: { confirm: t(:are_you_sure) } do %>
             <i class="fa fa-trash"></i>
           <% end -%>
         </td>
@@ -43,4 +37,4 @@
 
 <%= will_paginate @product_categories %>
 
-<%= common_link_to 'Cadastrar nova Categoria', new_product_category_path, icon: 'plus-circle', btn: true, class: 'btn', style: 'primary'  %>
+<%= common_link_to 'Cadastrar nova Categoria', new_admin_product_category_path, icon: 'plus-circle', btn: true, class: 'btn', style: 'primary'  %>

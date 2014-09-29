@@ -22,17 +22,17 @@
         <td><%= number_to_currency(product.price) %></td>
         <td><%= product.product_category.name unless product.product_category.nil? %></td>
         <td>
-          <%= link_to product do %>
+          <%= link_to ['admin', product] do %>
             <i class="fa fa-file"></i>
           <% end -%>
         </td>
         <td>
-          <%= link_to edit_product_path(product) do %>
+          <%= link_to edit_admin_product_path(product) do %>
             <i class="fa fa-edit"></i>
           <% end -%>
         </td>
         <td>
-          <%= link_to product, method: :delete, data: { confirm: t(:are_you_sure) } do %>
+          <%= link_to ['admin', product], method: :delete, data: { confirm: t(:are_you_sure) } do %>
             <i class="fa fa-trash"></i>
           <% end -%>
         </td>
@@ -46,5 +46,5 @@
 <%= will_paginate @products %>
 
 
-<%= common_link_to 'Cadastrar novo Produto', new_product_path, icon: 'plus-circle', btn: true, class: 'btn', style: 'primary'  %>
+<%= common_link_to 'Cadastrar novo Produto', new_admin_product_path, icon: 'plus-circle', btn: true, class: 'btn', style: 'primary'  %>
 

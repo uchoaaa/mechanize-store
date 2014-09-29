@@ -40,14 +40,14 @@
 
 			<div class="collapse navbar-collapse navbar-ex1-collapse">
 				<ul class="nav navbar-nav side-nav">
-					<%= common_menu 'Dashboard', 			dashboard_path, icon: :dashboard, menu: :dashboard %>
-					<%= common_menu 'Compras',				orders_path, icon: 'shopping-cart', menu: :orders %>
-					<%= common_menu 'Clientes', 			'#', icon: :users,	menu: :clients  %>
-					<%= common_menu 'Financeiro', 		'#', icon: :money, 	menu: :finance  %>
-					<%= common_menu 'Produtos', 			products_path, icon: :cubes,	menu: :products %>
-					<%= common_menu 'Configurações',	'#', icon: :cogs,		menu: :configs do %>
-						<% common_sub_menu 'Categoria de produtos', product_categories_path %>
-						<% common_sub_menu 'Seção de produtos', 		product_sections_path   %>
+					<%= common_menu 'Dashboard', 			admin_dashboard_path, icon: :dashboard, menu: :dashboard %>
+					<%= common_menu 'Compras',				admin_orders_path, 		icon: 'shopping-cart', menu: :orders %>
+					<%= common_menu 'Clientes', 			admin_dashboard_path, icon: :users,	menu: :clients  %>
+					<%= common_menu 'Financeiro', 		admin_dashboard_path, icon: :money, menu: :finance  %>
+					<%= common_menu 'Produtos', 			admin_products_path, 	icon: :cubes,	menu: :products %>
+					<%= common_menu 'Configurações',	'javascript:;', 			icon: :cogs,  menu: :configs do %>
+						<% common_sub_menu 'Categoria de produtos', admin_product_categories_path %>
+						<% common_sub_menu 'Seção de produtos', 		admin_product_sections_path   %>
 					<% end %>
 				</ul>
 			</div>
