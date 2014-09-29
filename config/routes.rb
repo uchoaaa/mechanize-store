@@ -1,7 +1,11 @@
 MechanizeStore::Engine.routes.draw do
 
   root 'dashboards#show'
-  
+
+  scope module: 'store' do
+    resources :products, only: :index
+  end
+
   namespace :admin do
     resource  :dashboard, only: :show
     resources :product_sections
