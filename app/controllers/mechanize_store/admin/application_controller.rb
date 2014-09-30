@@ -5,6 +5,8 @@ module MechanizeStore
       helper  CommonHelpers::ViewHelpers
 
       layout 'sb-admin'
+      
+      before_action :authenticate_manager!
     end
   end
 end

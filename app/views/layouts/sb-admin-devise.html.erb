@@ -1,0 +1,35 @@
+<html>
+<head>
+	<meta http-equiv="Content-type" content="text/html; charset=utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<%= stylesheet_link_tag    "mechanize_store/sb-admin" %>
+	<%= javascript_include_tag "mechanize_store/sb-admin" %>
+
+	<title>MechanizeStore | Login</title>
+
+</head>
+<body>
+	
+	<style type="text/css" media="screen">
+		.panel.panel-default {
+			padding: 30px;
+		}
+		.panel.panel-default input {
+			width: 100%;
+		}
+	</style>
+
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-sm-6 col-sm-offset-3">
+				<div class="panel panel-default">
+					<%= yield %>
+				</div>
+			</div>
+		</div>
+	</div>
+
+</body>
+</html>
