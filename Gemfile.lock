@@ -5,6 +5,7 @@ PATH
       bootstrap-sass (~> 3.1)
       bootstrap-will_paginate (= 0.0.10)
       common_helpers
+      devise
       font-awesome-rails (= 4.1.0.0)
       jbuilder (~> 1.2)
       jbuilder (~> 1.2)
@@ -52,6 +53,7 @@ GEM
       thread_safe (~> 0.1)
       tzinfo (~> 0.3.37)
     arel (4.0.2)
+    bcrypt (3.1.7)
     bootstrap-sass (3.1.1.1)
       sass (~> 3.2)
     bootstrap-will_paginate (0.0.10)
@@ -76,6 +78,12 @@ GEM
     coffee-script-source (1.7.0)
     columnize (0.8.9)
     debugger-linecache (1.2.0)
+    devise (3.2.4)
+      bcrypt (~> 3.0)
+      orm_adapter (~> 0.1)
+      railties (>= 3.2.6, < 5)
+      thread_safe (~> 0.1)
+      warden (~> 1.2.3)
     diff-lcs (1.2.5)
     em-websocket (0.5.1)
       eventmachine (>= 0.12.9)
@@ -126,6 +134,7 @@ GEM
     mime-types (1.25.1)
     minitest (4.7.5)
     multi_json (1.10.1)
+    orm_adapter (0.5.0)
     paperclip (3.5.3)
       activemodel (>= 3.0.0)
       activesupport (>= 3.0.0)
@@ -206,6 +215,8 @@ GEM
     turbolinks (2.2.2)
       coffee-rails
     tzinfo (0.3.39)
+    warden (1.2.3)
+      rack (>= 1.0)
     will_paginate (3.0.5)
 
 PLATFORMS

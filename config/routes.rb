@@ -1,5 +1,7 @@
 MechanizeStore::Engine.routes.draw do
 
+  devise_for :managers, class_name: "MechanizeStore::Manager", module: :devise
+
   root 'dashboards#show'
 
   scope module: 'store' do

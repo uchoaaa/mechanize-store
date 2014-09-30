@@ -11,7 +11,26 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140924215026) do
+ActiveRecord::Schema.define(version: 20140930183601) do
+
+  create_table "mechanize_store_admins", force: true do |t|
+    t.string   "name",                                null: false
+    t.string   "email",                  default: "", null: false
+    t.string   "encrypted_password",     default: "", null: false
+    t.string   "reset_password_token"
+    t.datetime "reset_password_sent_at"
+    t.datetime "remember_created_at"
+    t.integer  "sign_in_count",          default: 0,  null: false
+    t.datetime "current_sign_in_at"
+    t.datetime "last_sign_in_at"
+    t.string   "current_sign_in_ip"
+    t.string   "last_sign_in_ip"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "mechanize_store_admins", ["email"], name: "index_mechanize_store_admins_on_email", unique: true
+  add_index "mechanize_store_admins", ["reset_password_token"], name: "index_mechanize_store_admins_on_reset_password_token", unique: true
 
   create_table "mechanize_store_flags", force: true do |t|
     t.string   "name"
@@ -31,6 +50,25 @@ ActiveRecord::Schema.define(version: 20140924215026) do
   end
 
   add_index "mechanize_store_freights", ["order_id"], name: "index_mechanize_store_freights_on_order_id"
+
+  create_table "mechanize_store_managers", force: true do |t|
+    t.string   "name",                                null: false
+    t.string   "email",                  default: "", null: false
+    t.string   "encrypted_password",     default: "", null: false
+    t.string   "reset_password_token"
+    t.datetime "reset_password_sent_at"
+    t.datetime "remember_created_at"
+    t.integer  "sign_in_count",          default: 0,  null: false
+    t.datetime "current_sign_in_at"
+    t.datetime "last_sign_in_at"
+    t.string   "current_sign_in_ip"
+    t.string   "last_sign_in_ip"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "mechanize_store_managers", ["email"], name: "index_mechanize_store_managers_on_email", unique: true
+  add_index "mechanize_store_managers", ["reset_password_token"], name: "index_mechanize_store_managers_on_reset_password_token", unique: true
 
   create_table "mechanize_store_order_items", force: true do |t|
     t.integer  "quantity"
