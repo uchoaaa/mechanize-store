@@ -13,5 +13,10 @@ module MechanizeStore
     end
 
     MechanizeStore::Engine.config.i18n.default_locale = I18n.default_locale
+
+    config.to_prepare do
+      Devise::SessionsController.layout "sb-admin-devise"
+    end
+
   end
 end
