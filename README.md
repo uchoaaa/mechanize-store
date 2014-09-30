@@ -44,6 +44,15 @@ Mount routes:
 With that all the main CRUD operations are available:
 
 	rake routes
+	
+Create the default Manager mannualy
+
+	$ rails c
+	manager = MechanizeStore::Manager.new
+	manager.name = 'Default Manager'
+	manager.email = 'manager@mechanize.store'
+	manager.password = 'managermanager'
+	manager.save
 
 
 ## Models

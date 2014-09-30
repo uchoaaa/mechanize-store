@@ -8,6 +8,7 @@ test/dummy/tmp/
 test/dummy/.sass-cache
 test/dummy/public/*/**
 test/dummy/tmp/cache/assets/
+test/dummy/db/schema.rb
 *.gem
 .DS_Store
 */**/.DS_Store

@@ -1,3 +1,5 @@
+require 'devise'
+
 module MechanizeStore
   class Engine < ::Rails::Engine
     isolate_namespace MechanizeStore

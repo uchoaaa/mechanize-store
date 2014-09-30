@@ -32,6 +32,7 @@ Gem::Specification.new do |s|
   s.add_dependency 'jbuilder', '~> 1.2'
   s.add_dependency 'jbuilder', '~> 1.2'
   s.add_dependency 'common_helpers'
+  s.add_dependency 'devise'
   
   s.add_development_dependency 'sqlite3', '1.3.9'
   s.add_development_dependency 'guard-livereload'
