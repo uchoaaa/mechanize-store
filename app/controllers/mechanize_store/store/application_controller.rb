@@ -4,7 +4,7 @@ module MechanizeStore
       include CommonHelpers::ControllerHelpers
       helper  CommonHelpers::ViewHelpers
 
-      # layout 'sb-admin'
+      layout 'front-store'
     end
   end
 end
