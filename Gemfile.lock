@@ -1,3 +1,10 @@
+GIT
+  remote: https://github.com/uchoaaa/common_helpers
+  revision: 0db9f6a5d6de311e4d6155f69351d245e2eef679
+  specs:
+    common_helpers (0.0.5)
+      rails (~> 4)
+
 PATH
   remote: .
   specs:
@@ -18,12 +25,6 @@ PATH
       simple_form (= 3.0.1)
       turbolinks (~> 2.2)
       will_paginate (= 3.0.5)
-
-PATH
-  remote: /Users/rafaeluchoa/workspace/common_helpers
-  specs:
-    common_helpers (0.0.5)
-      rails (~> 4)
 
 GEM
   remote: https://rubygems.org/

@@ -4,6 +4,7 @@ module MechanizeStore
   module Store
     class ProductsController < ApplicationController
       def index
+      	@products = Product.all
       end
     end
   end
