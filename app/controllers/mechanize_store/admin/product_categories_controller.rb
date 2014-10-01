@@ -34,7 +34,7 @@ module MechanizeStore
           if @product_category.save
             format.html do 
               flash[:notice] = I18n.t(:created, model: I18n.t(:product_category, scope: "activerecord.models")) 
-              redirect_to @product_category
+              redirect_to [:admin, @product_category]
             end
           else
             format.html { render action: "new" }
